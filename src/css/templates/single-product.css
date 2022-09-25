@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+# Product
+--------------------------------------------------------------*/
+
+/* Product Main
+--------------------------------------------- */
+
+.single-product div.product {
+  background-color: var(--bg-primary);
+}
+
+.product__container {
+  max-width: var(--max-width-normal);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .product__container {
+    padding: 4.5rem 20px;
+  }
+  .product__container::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* Product Gallery
+  --------------------------------------------- */
+
+@media (max-width: 959px) {
+  .product-gallery {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .product-gallery {
+    float: left;
+    width: 50%;
+    padding-right: 0.75rem;
+    position: sticky;
+    top: 85px;
+  }
+}
+
+/* Product Content
+  --------------------------------------------- */
+
+@media (max-width: 767px) {
+  .product .summary {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .product .summary {
+    float: left;
+    width: 50%;
+    padding-left: 0.75rem;
+  }
+}
+
+/* Product Header */
+
+.product-header {
+  margin: 1.5rem 0;
+}
+
+.product-header .breadcrumb {
+  margin-bottom: 1.5rem;
+}
+
+.product-header .artist {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra-bold);
+  margin-bottom: 0.75rem;
+}
+
+.product-header .product-title {
+  font-size: var(--font-size-xl);
+}
+
+.product-header .preorder-item,
+.product-header .used-item {
+  display: block;
+  margin: 1.5rem 0;
+}
+
+/* Product Quantity - Stock */
+
+.single-product .quantity,
+.stock {
+  display: none !important;
+}
+
+/* Product Cart */
+
+.product-cart {
+  margin: 1.5rem 0;
+}
+
+.product-cart .price {
+  font-size: var(--font-size-md);
+}
+
+/* Product Description */
+
+.woocommerce-product-details__short-description {
+  margin: 2rem 0;
+}
+
+/* Variations */
+
+.variations_form tr {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.variations_form th {
+  display: block;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 0.125rem;
+}
+
+.variations_form td {
+  display: block;
+}
+
+.variations_form td select {
+  width: 100%;
+}
+
+.reset_variations {
+  margin: 1rem 0 0.5rem;
+}
+
+.woocommerce-variation-price {
+  margin: 1.5rem 0;
+}
+
+/* Related / Upsells
+  --------------------------------------------- */
+
+.products-related,
+.products-upsells {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-primary);
+}
+
+.products-related__container,
+.products-upsells__container {
+  max-width: var(--max-width-normal);
+  margin: 0 auto;
+  padding: 4.5rem 20px;
+}

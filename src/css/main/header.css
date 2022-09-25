@@ -1,0 +1,158 @@
+/*--------------------------------------------------------------
+# Site Header
+--------------------------------------------------------------*/
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.site-header__container {
+  /* max-width: var(--primary-max-width);
+  margin: 0 auto; */
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header a {
+  padding: 0.75rem 0;
+}
+
+/* Site Title
+  --------------------------------------------- */
+
+.site-header .site-title {
+  font-size: var(--font-size-lg);
+}
+
+/* Main Menu
+  --------------------------------------------- */
+
+@media (max-width: 960px) {
+  #main-menu {
+    display: none;
+  }
+}
+
+#main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: var(--font-size-lg);
+}
+
+#main-menu > li {
+  padding: 0 0.75rem;
+}
+
+/* Cart
+  --------------------------------------------- */
+
+  .site-header .cart {
+    font-size: var(--font-size-lg);
+  }
+
+/* Site Header Store Flyout
+  --------------------------------------------- */
+
+/* Store Flyout Button */
+
+#store-flyout-button {
+  position: relative;
+  padding: 0 20px;
+}
+
+#store-flyout-button::after {
+  font-family: 'Material';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  -moz-font-feature-settings: 'liga';
+  content: '\e5cf';
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: ease-in 0.15s;
+}
+
+#store-flyout-button.active::after {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+
+/* Store Flyout */
+
+#store-flyout {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+#store-flyout .flyout__inner {
+  max-width: var(--max-width-normal);
+  margin: 0 auto;
+  padding: 1.5rem 40px; 
+}
+
+#store-flyout a {
+  color: #fff;
+}
+
+#store-flyout.active {
+  display: block;
+}
+
+#store-flyout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#records-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Site Header Search
+  --------------------------------------------- */
+
+.header-search {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+  .header-search {
+    display: none;
+  }
+}
+
+.header-search input {
+  width: 400px;
+  border: 1px solid #f5f5f5;
+  border-radius: 0;
+  background-color: #f5f5f5;
+}
+
+.header-search .search-submit {
+  display: none;
+}
+
