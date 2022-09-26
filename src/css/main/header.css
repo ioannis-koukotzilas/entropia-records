@@ -20,14 +20,16 @@
 }
 
 .site-header a {
-  padding: 0.75rem 0;
+  height: calc(3rem + 20px);
+  display: flex;
+  align-items: center;
 }
 
 /* Site Title
   --------------------------------------------- */
 
 .site-header .site-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
 }
 
 /* Main Menu
@@ -44,7 +46,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
 }
 
 #main-menu > li {
@@ -55,7 +57,7 @@
   --------------------------------------------- */
 
   .site-header .cart {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
 
 /* Site Header Store Flyout

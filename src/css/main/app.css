@@ -10,10 +10,10 @@
   background-color: var(--bg-primary);
 }
 
-.site-main__inner {
+.site-main > .container {
   max-width: var(--max-width-normal);
   margin: 0 auto;
-  padding: 4.5rem 20px;
+  padding: 3rem 20px;
 }
 
 /*--------------------------------------------------------------
@@ -41,7 +41,7 @@
 .site-footer .brand__container {
   max-width: var(--max-width-normal);
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 3rem 20px;
   text-align: center;
 }
 
@@ -342,7 +342,6 @@ form.checkout {
 }
 
 .section-header__title {
-  font-size: var(--font-size-lg);
   margin-bottom: 1.5rem;
 }
 
@@ -370,9 +369,9 @@ form.checkout {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 60px;
+  left: calc(3rem + 20px);
   height: 100%;
-  border-right: 1px solid #e2e2e2;
+  border-right: 1px solid var(--border-primary);
   z-index: 0;
 }
 
@@ -388,14 +387,9 @@ form.checkout {
 .section-header__title,
 .results-count .facetwp-facet-results_count {
   position: sticky;
-  top: 54px;
-  padding: 4.5rem 20px;
+  top: calc(3rem + 21px);
+  padding: 3rem 20px;
   writing-mode: vertical-lr;
-  line-height: 1;
-}
-
-.facetwp-facet-results_count {
-  font-size: var(--font-size-lg);
 }
 
 /* Details / Summary */
@@ -442,3 +436,7 @@ details summary::-webkit-details-marker {
   width: 100%;
   
 }
+
+
+
+

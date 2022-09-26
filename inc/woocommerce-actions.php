@@ -15,7 +15,7 @@ remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrap
 // Wraps all WooCommerce content in wrappers which match the theme markup.
 function monoscopic_woocommerce_wrapper_before()
 {
-    echo '<main id="primary" class="site-main">';
+    echo '<main class="site-main">';
 }
 add_action('woocommerce_before_main_content', 'monoscopic_woocommerce_wrapper_before');
 
@@ -29,7 +29,7 @@ add_action('woocommerce_after_main_content', 'monoscopic_woocommerce_wrapper_aft
 // Site main wrapper open.
 function archive_site_main_wrapper_open()
 {
-    if (!is_singular()) : echo '<div class="site-main__inner">';
+    if (!is_singular()) : echo '<div class="container">';
     endif;
 }
 add_action('woocommerce_before_main_content', 'archive_site_main_wrapper_open', 15);

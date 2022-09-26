@@ -107,12 +107,3 @@ container.appendChild(bottomRightCross);
 
 
 
-
-
-
-
-
-
-
-
-

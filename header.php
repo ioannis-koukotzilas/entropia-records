@@ -20,8 +20,6 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 
-		<h1>Working Branch</h1>
-
 		<header class="site-header">
 
 			<div class="site-header__container">

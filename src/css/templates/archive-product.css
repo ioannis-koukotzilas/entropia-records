@@ -1,8 +1,10 @@
 
 
 .woocommerce-products-header__title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     margin-bottom: 1.5rem;
   }
 
-  
+  .woocommerce-products-header {
+    border-bottom: 1px solid var(--border-primary);
+  }
