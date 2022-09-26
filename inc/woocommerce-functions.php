@@ -76,7 +76,7 @@ function monoscopic_attribute_link_artist()
 function monoscopic_attribute_name_label()
 {
 	global $post;
-	$attribute_names = ['pa_label'];
+	$attribute_names = ['pa_format'];
 	foreach ($attribute_names as $attribute_name) {
 		$taxonomy = get_taxonomy($attribute_name);
 		if ($taxonomy && !is_wp_error($taxonomy)) {
@@ -87,11 +87,12 @@ function monoscopic_attribute_name_label()
 					$full_line = $term->name;
 					array_push($terms_array, $full_line);
 				}
-				echo '<div class="label">' . implode(', ', $terms_array) . '</div>';
+				echo '<span class="format">' . implode(', ', $terms_array) . '&nbsp;|</span>';
 			}
 		}
 	}
 }
+add_action( 'woocommerce_after_shop_loop_item_title', 'monoscopic_attribute_name_label', 9 );
 
 /**
  * Product attribute arrays

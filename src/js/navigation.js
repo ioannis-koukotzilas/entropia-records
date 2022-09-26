@@ -4,25 +4,6 @@
  *
  */
 
-// // store Flyout Variables
-// var storeFlyoutButton = document.getElementById('store-flyout-button');
-// var storeFlyout = document.getElementById('store-flyout');
-
-// // store Flyout Button Click Event
-// storeFlyoutButton.addEventListener('click', () => {
-//   storeFlyoutButton.classList.toggle('active');
-//   storeFlyout.classList.toggle('active');
-// });
-
-// Detect Clicks Outside of Elements
-// document.addEventListener('click', function (event) {
-//   // If user clicks inside the element, do nothing
-//   if (event.target.closest('#store-flyout-button') || event.target.closest('#store-flyout'))
-//     return;
-//   // If user clicks outside the element, remove it
-//   storeFlyoutButton.classList.remove('active');
-//   storeFlyout.classList.remove('active');
-// });
 
 function navigation() {
   const mainMenu = document.querySelector('.site-header');

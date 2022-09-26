@@ -45,16 +45,15 @@
   text-align: center;
 }
 
-.brand-logo {
-  content: url('../assets/logo-entropia.svg');
+/* .brand-logo {
+  content: url(../assets/logo-entropia.svg);
   display: block;
   width: 85px;
   margin: 0 0 1rem;
-}
+} */
 
 .site-footer .site-title h1 {
   font-size: 4.5vw;
-  font-weight: var(--font-weight-extra-bold);
   line-height: 1;
 }
 
@@ -119,7 +118,7 @@
 --------------------------------------------------------------*/
 
 .products {
-  margin: 0;
+  margin: 3rem 0;
   padding: 0;
   list-style: none;
 }
@@ -170,13 +169,10 @@
   font-size: 1rem;
 }
 
-.products .product .price {
-  display: block;
-}
-
 .products .product .button {
-  display: block;
-  /* margin-top: 0.5em; */
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border-primary);
 }
 
 /*--------------------------------------------------------------
@@ -425,14 +421,14 @@ details summary::-webkit-details-marker {
 }
 
 
-.facetwp-facet-pager_ {
+.facetwp-type-pager {
   margin: 3rem auto;
   max-width: 480px;
 }
 
 .facetwp-load-more {
   background-color: transparent;
-  border: 2px solid;
+  border: 1px solid var(--border-primary);
   width: 100%;
   
 }

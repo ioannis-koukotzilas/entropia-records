@@ -32,9 +32,11 @@ add_action('woocommerce_after_shop_loop', 'fwp_wrapper_close', 15);
 
 function fwp_add_pager()
 {
-  echo do_shortcode('[facetwp facet="pager_"]');
+  echo do_shortcode('[facetwp facet="load_more"]');
 }
 add_action('woocommerce_after_shop_loop', 'fwp_add_pager', 20);
+
+
 
 
 // Facet results count.

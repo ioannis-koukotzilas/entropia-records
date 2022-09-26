@@ -73,7 +73,7 @@
 
 .product-header .artist {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-extra-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .product-header .product-title {

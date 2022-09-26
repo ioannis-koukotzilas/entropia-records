@@ -32,6 +32,13 @@
   font-size: var(--font-size-md);
 }
 
+.site-header .site-title a::before {
+  content: url(../assets/logo-entropia-black.svg);
+  width: 1.953rem;
+  height: auto;
+  margin-right: 0.75rem;
+}
+
 /* Main Menu
   --------------------------------------------- */
 
@@ -56,9 +63,9 @@
 /* Cart
   --------------------------------------------- */
 
-  .site-header .cart {
-    font-size: var(--font-size-md);
-  }
+.site-header .cart {
+  font-size: var(--font-size-md);
+}
 
 /* Site Header Store Flyout
   --------------------------------------------- */
@@ -108,7 +115,7 @@
 #store-flyout .flyout__inner {
   max-width: var(--max-width-normal);
   margin: 0 auto;
-  padding: 1.5rem 40px; 
+  padding: 1.5rem 40px;
 }
 
 #store-flyout a {
@@ -157,4 +164,3 @@
 .header-search .search-submit {
   display: none;
 }
-

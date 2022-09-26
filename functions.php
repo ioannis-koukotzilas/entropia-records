@@ -64,17 +64,17 @@ add_action('after_setup_theme', 'monoscopic_content_width', 0);
  */
 function monoscopic_scripts()
 {
-	wp_enqueue_style('normalize', get_template_directory_uri() . '/src/css/main/normalize.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('normalize', get_template_directory_uri() . '/src/css/normalize.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('style', get_stylesheet_uri(), array(), _MONOSCOPIC_VERSION);
 
-	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/main/app.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('header', get_template_directory_uri() . '/src/css/main/header.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/main/woocommerce.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/modules/swiper-bundle.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('playlist', get_template_directory_uri() . '/src/css/modules/playlist.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('single-product', get_template_directory_uri() . '/src/css/templates/single-product.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('archive-product', get_template_directory_uri() . '/src/css/templates/archive-product.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/modules/facets.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/app.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('header', get_template_directory_uri() . '/src/css/header.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper-bundle.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('playlist', get_template_directory_uri() . '/src/css/playlist.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('single-product', get_template_directory_uri() . '/src/css/single-product.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('archive-product', get_template_directory_uri() . '/src/css/archive-product.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/facets.css', array(), _MONOSCOPIC_VERSION);
 
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('playlist', get_template_directory_uri() . '/src/js/playlist.js', array(), _MONOSCOPIC_VERSION, true);
