@@ -47,7 +47,7 @@ $post_thumbnail_id = $product->get_image_id();
 				</div>
 			</div>
 
-			<div class="swiper-scrollbar"></div>
+			<div class="swiper-pagination"></div>
 
 		</div>
 

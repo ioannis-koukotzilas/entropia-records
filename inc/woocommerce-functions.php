@@ -177,7 +177,7 @@ function monoscopic_audio_player()
 				<div class="audio-playback">
 					<div class="audio-player-play-btn">
 						<span class="icon"></span>
-						<div class="playlist-title"><?php esc_html_e('Tracks for:', 'monoscopic'); ?> <?php the_field('product_title'); ?></div>
+						<div class="playlist-title"><?php esc_html_e('Listen to:', 'monoscopic'); ?> <?php the_field('product_title'); ?></div>
 					</div>
 					<div class="audio-player-play-time">0:00</div>
 					<div class="audio-player-timebar">

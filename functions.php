@@ -70,12 +70,14 @@ function monoscopic_scripts()
 	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/app.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('header', get_template_directory_uri() . '/src/css/header.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
+	
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper-bundle.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('playlist', get_template_directory_uri() . '/src/css/playlist.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('single-product', get_template_directory_uri() . '/src/css/single-product.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('archive-product', get_template_directory_uri() . '/src/css/archive-product.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/facets.css', array(), _MONOSCOPIC_VERSION);
 
+	wp_enqueue_script('dotdotdot', get_template_directory_uri() . '/src/js/dotdotdot.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('playlist', get_template_directory_uri() . '/src/js/playlist.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), _MONOSCOPIC_VERSION, true);

@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .audio-player {
-  margin: 2rem 0 0;
+  margin: 1.5rem 0;
 }
 
 .audio-player-play-time,
@@ -16,20 +16,34 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .audio-player-timebar {
-  height: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 15px;
   cursor: pointer;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.audio-player-timebar::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  top: 7px;
+  left: 0;
   background-color: var(--border-primary);
 }
 
 .audio-player-progress {
-  height: 100%;
+  position: relative;
+  height: 4px;
   width: 0%;
-  background-color: var(--border-success);
+  background-color: var(--border-primary);
 }
 
 .audio-player .audio-player-play-btn .icon::after {
@@ -51,12 +65,12 @@
   display: flex;
   gap: 1rem;
   color: var(--text-primary);
-  padding: 0.25rem 0;
+  /* padding: 0.25rem 0; */
 }
 
-.audio-track:not(:last-of-type) {
+/* .audio-track:not(:last-of-type) {
   border-bottom: 1px solid var(--border-primary);
-}
+} */
 
 .audio-track:hover {
   cursor: pointer;

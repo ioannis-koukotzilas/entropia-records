@@ -436,3 +436,16 @@ details summary::-webkit-details-marker {
 
 
 
+
+
+.woocommerce-product-details__short-description .read-more {
+  cursor:pointer;
+ }
+ .woocommerce-product-details__short-description .read-more:before {
+  content:'Read more'
+ }
+ .woocommerce-product-details__short-description.active .read-more:before {
+  content:'Read less'
+ }
+
+
