@@ -121,31 +121,3 @@ require get_template_directory() . '/inc/facets-setup.php';
 
 
 
-
-/**
- * @snippet       Disable WooCommerce Ajax Cart Fragments Everywhere
- * @how-to        Get CustomizeWoo.com FREE
- * @author        Rodolfo Melogli
- * @compatible    WooCommerce 3.6.4
- * @donate $9     https://businessbloomer.com/bloomer-armada/
- */
- 
-// add_action( 'wp_enqueue_scripts', 'bbloomer_disable_woocommerce_cart_fragments', 11 ); 
- 
-// function bbloomer_disable_woocommerce_cart_fragments() { 
-//    wp_dequeue_script( 'wc-cart-fragments' ); 
-// }
-
-/**
- * @snippet       Disable WooCommerce Ajax Cart Fragments except cart page
- * @how-to        Get CustomizeWoo.com FREE
- * @author        Rodolfo Melogli
- * @compatible    WooCommerce 3.6.4
- * @donate $9     https://businessbloomer.com/bloomer-armada/
- */
- 
-// add_action( 'wp_enqueue_scripts', 'bbloomer_disable_woocommerce_cart_fragments', 11 ); 
- 
-// function bbloomer_disable_woocommerce_cart_fragments() { 
-//    if ( ! is_cart() ) wp_dequeue_script( 'wc-cart-fragments' ); 
-// }

@@ -92,7 +92,7 @@ function monoscopic_attribute_name_label()
 		}
 	}
 }
-add_action( 'woocommerce_after_shop_loop_item_title', 'monoscopic_attribute_name_label', 9 );
+add_action('woocommerce_after_shop_loop_item_title', 'monoscopic_attribute_name_label', 9);
 
 /**
  * Product attribute arrays

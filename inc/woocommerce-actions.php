@@ -1,11 +1,15 @@
 <?php
 
 /**
+ * 
  * WooCommerce Actions
+ * 
  */
 
 /**
+ * 
  * Global
+ * 
  */
 
 // Remove default WooCommerce wrapper.
@@ -49,7 +53,9 @@ remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action('wp_footer', 'woocommerce_demo_store');
 
 /**
+ * 
  * Single product
+ * 
  */
 
 // Remove notices.
@@ -150,7 +156,9 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_ex
 add_action('woocommerce_single_product_summary', 'monoscopic_audio_player', 45);
 
 /**
- * Archive
+ * 
+ * Products Archive
+ * 
  */
 
 // Remove breadcrumb.

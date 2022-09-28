@@ -1,12 +1,17 @@
 <?php
 
 /**
+ * 
  * WooCommerce Compatibility File
+ * 
  */
 
 /**
+ * 
  * WooCommerce setup function.
+ * 
  */
+
 function monoscopic_woocommerce_setup()
 {
 	add_theme_support(
@@ -29,7 +34,9 @@ function monoscopic_woocommerce_setup()
 add_action('after_setup_theme', 'monoscopic_woocommerce_setup');
 
 /**
+ * 
  * WooCommerce Images
+ * 
  */
 
 // Used on single product pages.
@@ -80,12 +87,16 @@ add_filter('woocommerce_gallery_thumbnail_size', function ($size) {
 });
 
 /**
+ * 
  * Disable the default WooCommerce stylesheet.
+ * 
  */
 add_filter('woocommerce_enqueue_styles', '__return_empty_array');
 
 /**
+ * 
  * Cart
+ * 
  */
 
 // Cart Fragments. Ensure cart contents update when products are added to the cart via AJAX.
@@ -128,8 +139,11 @@ function monoscopic_woocommerce_header_cart()
 }
 
 /**
+ * 
  * Related Products.
+ * 
  */
+
 function monoscopic_woocommerce_related_products_args($args)
 {
 	$defaults = array(
@@ -144,7 +158,9 @@ function monoscopic_woocommerce_related_products_args($args)
 add_filter('woocommerce_output_related_products_args', 'monoscopic_woocommerce_related_products_args');
 
 /**
+ * 
  * Upsell Products.
+ * 
  */
 
 function wc_change_number_related_products($args)

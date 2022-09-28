@@ -9,6 +9,24 @@ let template;
 Swiper
 */
 
+// Home
+
+// Product gallery
+const swiperrrrrrrr = new Swiper('.spotlight', {
+  speed: 1000,
+  spaceBetween: 0,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+    // momentumBounce: false,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 // Product gallery
 const swiper = new Swiper('.product-images', {
   speed: 500,

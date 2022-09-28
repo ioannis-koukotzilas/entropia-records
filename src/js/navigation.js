@@ -4,36 +4,60 @@
  *
  */
 
+// Create the top level function
+function monoscopicNav(target) {
+  // Get the HTML elements
 
-function navigation() {
-  const mainMenu = document.querySelector('.site-header');
+  const nav = document.querySelector(target);
+  const navItem = nav.querySelectorAll('.has-panel > a');
+  const panel = nav.querySelectorAll('.panel');
 
-  const recordsBtn = mainMenu.querySelector('#menu-item-733');
-  const recordsFlyout = mainMenu.querySelector('#store-flyout');
+  // Loop through nav items
+  for (let i = 0; i < navItem.length; i++) {
+    // Create mouseover event for each nav item
+    navItem[i].onmouseover = () => {
+      for (let t = 0; t < navItem.length; t++) {
+        if (i == t) {
+          navItem[t].classList.add('active');
+          panel[t].classList.add('active');
+        }
+      }
+    };
 
-  function flyoutOpen() {
-    recordsFlyout.classList.add('active');
+    // Create mouseleave event for each nav item
+    navItem[i].onmouseleave = () => {
+      for (let t = 0; t < navItem.length; t++) {
+        if (i == t) {
+          navItem[t].classList.remove('active');
+          panel[t].classList.remove('active');
+        }
+      }
+    };
   }
 
-  function flyoutClose() {
-    recordsFlyout.classList.remove('active');
+  // Loop through panels
+  for (let i = 0; i < panel.length; i++) {
+    // Create mouseover event for each panel
+    panel[i].onmouseover = () => {
+      for (let t = 0; t < panel.length; t++) {
+        if (i == t) {
+          navItem[t].classList.add('active');
+          panel[t].classList.add('active');
+        }
+      }
+    };
+
+    // Create mouseleave event for each panel
+    panel[i].onmouseleave = () => {
+      for (let t = 0; t < panel.length; t++) {
+        if (i == t) {
+          navItem[t].classList.remove('active');
+          panel[t].classList.remove('active');
+        }
+      }
+    };
   }
-
-  recordsBtn.addEventListener('mouseover', () => {
-    flyoutOpen();
-  });
-
-  recordsBtn.addEventListener('mouseleave', () => {
-    flyoutClose();
-  });
-
-  recordsFlyout.addEventListener('mouseover', () => {
-    flyoutOpen();
-  });
-
-  recordsFlyout.addEventListener('mouseleave', () => {
-    flyoutClose();
-  });
 }
 
-navigation();
+// Init menu
+monoscopicNav('.site-header');
