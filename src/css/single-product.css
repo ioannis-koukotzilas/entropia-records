@@ -6,11 +6,11 @@
 --------------------------------------------- */
 
 .single-product div.product {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-default);
 }
 
 .product__container {
-  max-width: var(--max-width-normal);
+  max-width: var(--max-width-default);
   margin: 0 auto;
 }
 
@@ -143,13 +143,13 @@
 
 .products-related,
 .products-upsells {
-  background-color: var(--bg-primary);
-  border-top: 1px solid var(--border-primary);
+  background-color: var(--bg-default);
+  border-top: 1px solid var(--border-default);
 }
 
 .products-related__container,
 .products-upsells__container {
-  max-width: var(--max-width-normal);
+  max-width: var(--max-width-default);
   margin: 0 auto;
   padding: 3rem 20px;
 }

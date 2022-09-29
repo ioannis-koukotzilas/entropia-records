@@ -71,10 +71,13 @@
   transform: translate(-50%, -50%);
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  color: #eee;
-  font-size: var(--font-size-xl);
+  font-size: 4.768rem;
   font-style: normal;
-  font-feature-settings: 'ss03' 1;
+  /* font-feature-settings: 'ss03' 1; */
+  /* background-color: var(--bg-dark); */
+  color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+  
 }
 
 #s-prev.swiper-button-disabled,
@@ -84,7 +87,7 @@
 
 /* Products Slider */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
   .products-slider {
     width: 100%;
     margin-left: auto;
@@ -114,7 +117,7 @@
     position: relative;
     transition-property: transform;
   }
-}
+/* } */
 
 
 
@@ -164,16 +167,23 @@
 /* Auto Height */
 
 .swiper-autoheight,
-.swiper-autoheight .swiper-slide {
+.swiper-autoheight .swiper-slide,
+/* DELETE */
+.swiper-autoheight .slide {
   height: auto;
 }
 
-.swiper-autoheight .swiper-wrapper {
+.swiper-autoheight .swiper-wrapper,
+.swiper-autoheight > .container
+
+ {
   align-items: flex-start;
   transition-property: transform, height;
 }
 
-.swiper-backface-hidden .swiper-slide {
+.swiper-backface-hidden .swiper-slide,
+/* DELETE */
+.swiper-backface-hidden .slide {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

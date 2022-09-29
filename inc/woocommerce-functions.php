@@ -25,7 +25,7 @@ function monoscopic_gallery_image_html($attachment_id)
 function customize_woocommerce_breadcrumb()
 {
 	return array(
-		'delimiter'   => '',
+		'delimiter'   => ' / ',
 		'wrap_before' => '<nav class="breadcrumb" itemprop="breadcrumb">',
 		'wrap_after'  => '</nav>',
 		'before'      => '',

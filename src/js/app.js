@@ -12,14 +12,17 @@ Swiper
 // Home
 
 // Product gallery
-const swiperrrrrrrr = new Swiper('.spotlight', {
-  speed: 1000,
+const spotlight = new Swiper('.spotlight', {
+  wrapperClass: 'container',
+  slideClass: 'slide',
+  speed: 300,
   spaceBetween: 0,
+  autoHeight: true,
   freeMode: {
     enabled: true,
     sticky: true,
-    // momentumBounce: false,
   },
+  updateOnImagesReady: true,
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -64,15 +67,15 @@ cursorArea.forEach(function (e) {
 });
 
 // Products Slider
-if (window.innerWidth < 768) {
-  const testSwiper = new Swiper('.products-slider', {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    wrapperClass: 'products',
-    slideClass: 'product',
-    freeMode: true,
-  });
-}
+// if (window.innerWidth < 768) {
+//   const testSwiper = new Swiper('.products-slider', {
+//     slidesPerView: 'auto',
+//     spaceBetween: 10,
+//     wrapperClass: 'products',
+//     slideClass: 'product',
+//     freeMode: true,
+//   });
+// }
 
 /**
  * DotDotDot
@@ -147,3 +150,210 @@ Facets
     }
   });
 })(jQuery);
+
+/**
+ * Theme Toggle
+ */
+
+function toggleTheme(target) {
+  const toggleBtn = document.querySelector(target);
+
+  if (localStorage.getItem('dark-mode')) {
+    document.body.classList.add('dark-mode');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (document.body.classList.contains('dark-mode')) {
+      document.body.classList.remove('dark-mode');
+      localStorage.removeItem('dark-mode');
+    } else {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('dark-mode', true);
+    }
+  });
+}
+
+toggleTheme('#toggle-theme');
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+// function swiperMode() {
+
+//   const mediaQuerie = window.matchMedia('(max-width: 600px)');
+
+//   let ioannis;
+
+//   if (mediaQuerie.matches) {
+//     ioannis = new Swiper('.products-slider', {
+//       slidesPerView: 'auto',
+//       spaceBetween: 10,
+//       wrapperClass: 'products',
+//       slideClass: 'product',
+//       freeMode: true,
+//     });
+//   } else {
+//     ioannis.destroy();
+//   }
+// }
+
+// window.addEventListener('load', function () {
+//   swiperMode();
+// });
+
+// window.addEventListener('resize', function () {
+//   swiperMode();
+// });
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+// let ioannis;
+
+// function init() {
+//   ioannis = new Swiper('.products-slider', {
+//     slidesPerView: 'auto',
+//     spaceBetween: 10,
+//     wrapperClass: 'products',
+//     slideClass: 'product',
+//     freeMode: true,
+//   });
+// }
+
+// function destroy() {
+//   ioannis.destroy;
+// }
+
+// function swiperMode() {
+//   let mobile = window.matchMedia('(max-width: 600px)');
+
+//   // Enable (for mobile)
+//   if (mobile.matches) {
+//     init();
+//   }
+
+//   // Disable (for desktop)
+//   else {
+//     destroy();
+//   }
+// }
+
+// // console.log(swiper);
+
+// window.addEventListener('load', () => {
+//   swiperMode();
+// });
+
+// window.addEventListener('resize', () => {
+//   swiperMode();
+// });
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+// breakpoint where swiper will be destroyed
+// and switches to a dual-column layout
+// const breakpoint = window.matchMedia('(min-width: 600px)');
+
+// let mySwiper;
+
+// const breakpointChecker = function () {
+
+//   if (breakpoint.matches == true) {
+
+//     return closeSwiper();
+
+//   } else if (breakpoint.matches == false) {
+
+//     return enableSwiper();
+
+//   }
+// };
+
+// const closeSwiper = function () {
+//   mySwiper.destroy(true, true);
+// };
+
+// const enableSwiper = function () {
+//   mySwiper = new Swiper('.products-slider', {
+//     slidesPerView: 'auto',
+//     spaceBetween: 10,
+//     wrapperClass: 'products',
+//     slideClass: 'product',
+//     freeMode: true,
+//   });
+// };
+
+// window.addEventListener('resize', () => {
+//   breakpointChecker();
+// });
+
+// breakpointChecker();
+
+/* Swiper
+ **************************************************************/
+// let ioannis;
+
+// /* Which media query
+//  **************************************************************/
+// function swiperMode() {
+//   let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+
+//   // Enable (for mobile)
+//   if (mobile.matches) {
+
+//       const ioannis = new Swiper('.products-slider', {
+//         slidesPerView: 'auto',
+//         spaceBetween: 10,
+//         wrapperClass: 'products',
+//         slideClass: 'product',
+//         freeMode: true,
+//       });
+
+//   }
+
+//   // Disable (for tablet)
+//   else {
+//     swiper.destroy();
+//     // init = false;
+//   }
+// }
+
+// /* On Load
+//  **************************************************************/
+// // window.addEventListener('load', function () {
+// //   swiperMode();
+// // });
+
+// swiperMode();
+
+// /* On Resize
+//  **************************************************************/
+// window.addEventListener('resize', function () {
+//   swiperMode();
+// });
+
+const ioannis = new Swiper('.products-slider', {
+  // Default parameters
+  wrapperClass: 'products',
+  slideClass: 'product',
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});

@@ -147,7 +147,7 @@ function monoscopic_woocommerce_header_cart()
 function monoscopic_woocommerce_related_products_args($args)
 {
 	$defaults = array(
-		'posts_per_page' => 4,
+		'posts_per_page' => 8,
 		'columns'        => 4,
 	);
 

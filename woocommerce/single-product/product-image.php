@@ -37,13 +37,13 @@ $post_thumbnail_id = $product->get_image_id();
 
 			<div id="s-prev">
 				<div class="cursor-area">
-					<i>←</i>
+					<i>-</i>
 				</div>
 			</div>
 
 			<div id="s-next">
 				<div class="cursor-area">
-					<i>→</i>
+					<i>+</i>
 				</div>
 			</div>
 

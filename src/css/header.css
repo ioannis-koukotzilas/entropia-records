@@ -6,8 +6,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--bg-primary);
-  border-bottom: 1px solid var(--border-primary);
+  background-color: var(--bg-default);
+  border-bottom: 1px solid var(--border-default);
 }
 
 /* Navbar
@@ -43,11 +43,6 @@
 
 /* Main Menu */
 
-@media (max-width: 960px) {
-  #main-menu {
-    display: none;
-  }
-}
 
 #main-menu {
   list-style: none;
@@ -60,6 +55,13 @@
 #main-menu > li a {
   padding: 0 0.75rem;
 }
+
+@media (max-width: 768px) {
+  #main-menu {
+    display: none;
+  }
+}
+
 
 /* Cart */
 
@@ -81,7 +83,7 @@
   left: 0;
   width: 100%;
   background-color: var(--bg-dark);
-  color: #fff;
+  color: var(--text-light);
 }
 
 .site-header .panel.active {
@@ -89,7 +91,7 @@
 }
 
 .site-header .panel a {
-  color: #fff;
+  color: #141414;
 }
 
 .site-header .panel > .container {
