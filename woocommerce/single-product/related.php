@@ -22,19 +22,17 @@ if (!defined('ABSPATH')) {
 
 if ($related_products) : ?>
 
-	<div class="products-related">
+	<div class="related">
 
-		<div class="products-related__container">
+		<div class="container">
 
 			<?php
 			$heading = apply_filters('woocommerce_product_related_products_heading', __('Related items', 'monoscopic'));
 
 			if ($heading) :
 			?>
-				<div class="section-header">
-					<div class="section-header__title">
-						<?php echo esc_html($heading); ?>
-					</div>
+				<div class="block-title">
+					<h2><?php echo esc_html($heading); ?></h2>
 				</div>
 			<?php endif; ?>
 

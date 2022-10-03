@@ -165,9 +165,13 @@ add_filter('woocommerce_output_related_products_args', 'monoscopic_woocommerce_r
 
 function wc_change_number_related_products($args)
 {
+	$defaults = array(
+		'posts_per_page' => 8,
+		'columns'        => 4,
+	);
 
-	$args['posts_per_page'] = 4;
-	$args['columns'] = 4; //change number of upsells here
+	$args = wp_parse_args($defaults, $args);
+
 	return $args;
 }
 add_filter('woocommerce_upsell_display_args', 'wc_change_number_related_products', 20);

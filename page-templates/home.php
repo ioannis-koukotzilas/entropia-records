@@ -29,7 +29,7 @@ get_header();
 						<div class="right color-secondary">
 							<div class="container">
 								<div class="inner">
-								<?php the_sub_field( 'spotlight_text' ); ?>
+									<?php the_sub_field('spotlight_text'); ?>
 									<h1>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</h1>
 									<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 								</div>

@@ -9,21 +9,23 @@
   background-color: var(--bg-default);
 }
 
-.product__container {
+.product .main > .container {
   max-width: var(--max-width-default);
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .product__container {
+  .product .main > .container {
     padding: 3rem 20px;
   }
-  .product__container::after {
+  .product > .main .container::after {
     content: '';
     display: table;
     clear: both;
   }
 }
+
+
 
 /* Product Gallery
   --------------------------------------------- */
@@ -141,14 +143,14 @@
 /* Related / Upsells
   --------------------------------------------- */
 
-.products-related,
-.products-upsells {
+.related,
+.upsells {
   background-color: var(--bg-default);
   border-top: 1px solid var(--border-default);
 }
 
-.products-related__container,
-.products-upsells__container {
+.related > .container,
+.upsells > .container {
   max-width: var(--max-width-default);
   margin: 0 auto;
   padding: 3rem 20px;

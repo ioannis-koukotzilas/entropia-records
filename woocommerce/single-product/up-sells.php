@@ -22,19 +22,17 @@ if (!defined('ABSPATH')) {
 
 if ($upsells) : ?>
 
-	<div class="products-upsells products-slider">
+	<div class="upsells">
 
-		<div class="products-upsells__container">
+		<div class="container">
 
 			<?php
 			$heading = apply_filters('woocommerce_product_upsells_products_heading', __('Recommended items', 'monoscopic'));
 
 			if ($heading) :
 			?>
-				<div class="section-header">
-					<div class="section-header__title">
-						<?php echo esc_html($heading); ?>
-					</div>
+				<div class="block-title">
+					<h2><?php echo esc_html($heading); ?></h2>
 				</div>
 			<?php endif; ?>
 
