@@ -166,6 +166,10 @@
   margin: 1.5rem 0;
 }
 
+.facets > .reset {
+  margin: 1.5rem 0;
+}
+
 .fs-wrap {
   width: 100%;
   /* display: inline-block; */
@@ -239,8 +243,8 @@
   width: 100%;
   min-width: 250px;
   position: absolute;
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-primary);
+  background-color: var(--bg-default);
+  border: 1px solid var(--border-default);
   z-index: 1000;
 }
 
@@ -291,7 +295,7 @@
 }
 
 .fs-option.selected {
- text-decoration: underline;
+ color: var(--text-accent);
 }
 
 .fs-wrap.multiple .fs-option {

@@ -180,11 +180,19 @@ table.shop_table_responsive tr td.download-actions .button {
 
 .woocommerce-notices-wrapper > ul,
 .woocommerce-notices-wrapper > div {
-  max-width: 1440px;
-  margin: 0 auto 1em;
-  padding: 0.5em 10px;
+  margin: 0 auto 1.5rem;
+  padding: 0.5rem 0.75rem;
   list-style: none;
-  border: 1px dashed #ccc;
+  color: var(--text-dark);
+  font-size: var(--font-size-sm);
+}
+
+.woocommerce-notices-wrapper .woocommerce-message {
+  background-color: var(--bg-accent);
+}
+
+.woocommerce-notices-wrapper .woocommerce-error{
+  background-color: var(--bg-danger);
 }
 
 .woocommerce-notices-wrapper .wc-forward {

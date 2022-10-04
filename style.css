@@ -105,14 +105,15 @@ html {
 /* Dark Mode */
 .dark-mode {
   --bg-default: #141414;
-  --bg-dark: #eeeeee;
+  --bg-dark: #e0e0e0;
   --bg-accent: #70b5f9;
+  --bg-danger: #f59778;
 
-  --text-default: #eee;
+  --text-default: #e0e0e0;
   --text-light: #141414;
   --text-dark: #141414;
 
-  --border-default: #999999;
+  --border-default: #3d3d3d;
   --text-accent: #70b5f9;
 }
 
@@ -132,7 +133,7 @@ html {
 --------------------------------------------- */
 
 html {
-  font-size: 14px;
+  font-size: 15px;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
@@ -275,8 +276,9 @@ a:active {
 
 .underline {
   text-decoration: underline;
-  text-underline-offset: 0.15rem;
-  text-decoration-color: var(--border-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25rem;
+  text-decoration-color: var(--border-default);
 }
 
 /* Forms

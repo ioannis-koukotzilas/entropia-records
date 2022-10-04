@@ -58,8 +58,9 @@ remove_action('wp_footer', 'woocommerce_demo_store');
  * 
  */
 
-// Remove notices.
-// remove_action('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);
+// Reposition notices.
+remove_action('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', 15 );
 
 // Remove default product title.
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
@@ -159,7 +160,8 @@ function monoscopic_product_container_open()
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 40);
 
-    add_action('woocommerce_single_product_summary', 'monoscopic_audio_player', 45);
+    // Add the audio player.
+    add_action('woocommerce_after_single_product_summary', 'monoscopic_audio_player', 10);
 
     /**
      * 

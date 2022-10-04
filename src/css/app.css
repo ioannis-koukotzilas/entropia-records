@@ -104,67 +104,7 @@
   padding: 10px 20px;
 }
 
-/*--------------------------------------------------------------
-# Archive Products
---------------------------------------------------------------*/
 
-.products {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.products .product {
-  position: relative;
-}
-
-/* Products Grid */
-
-@media (min-width: 768px) {
-  .archive .products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-    row-gap: 3rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .archive .products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Product Loop
---------------------------------------------- */
-
-.products .product img {
-  display: block;
-}
-
-.products .product .preorder-item {
-  position: absolute;
-  z-index: 1;
-  top: 20px;
-  right: 0;
-  background-color: #01544c;
-  color: #fff;
-  font-size: 0.8em;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0.5em;
-}
-
-.products .product .woocommerce-loop-product__title {
-  margin: 1rem 0 0;
-  font-size: 1rem;
-}
-
-.products .product .button {
-  margin-top: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--border-default);
-}
 
 /*--------------------------------------------------------------
 # Cart
@@ -379,7 +319,7 @@ form.checkout {
   .block-title > h2,
   .results-count .facetwp-facet-results_count {
     position: sticky;
-    top: calc(3rem + 21px);
+    top: calc(3rem + 20px);
     padding: 3rem 20px;
     writing-mode: vertical-lr;
   }
