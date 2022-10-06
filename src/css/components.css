@@ -1,0 +1,137 @@
+/* Product Gallery */
+
+.product-gallery .slider {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 959px) {
+  .product-gallery .navigation .prev,
+  .product-gallery .navigation .next {
+    display: none;
+  }
+}
+
+.product-gallery .navigation .prev,
+.product-gallery .navigation .next {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: opacity 0.5s;
+  /* mix-blend-mode: difference; */
+}
+
+.product-gallery .navigation .prev {
+  left: 0;
+}
+
+.product-gallery .navigation .next {
+  left: 50%;
+}
+
+.product-gallery .navigation .cursor-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+}
+
+.product-gallery .navigation .icon {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: var(--font-size-xl);
+}
+
+.product-gallery .navigation .prev .icon::after {
+  content: '\e5c4';
+}
+
+.product-gallery .navigation .next .icon::after {
+  content: '\e5c8';
+}
+
+.product-gallery .navigation .swiper-button-disabled {
+  opacity: 0.25;
+}
+
+/* Products Slider */
+
+.products-slider {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.products-slider .products {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0, 0);
+}
+
+.products-slider .product {
+  flex-shrink: 0;
+  width: 65%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.products-slider .navigation {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.products-slider .navigation .icon {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+}
+
+.products-slider .navigation .prev:after {
+  content: '\e5c4';
+}
+
+.products-slider .navigation .next:after {
+  content: '\e5c8';
+}
+
+.products-slider .navigation .swiper-button-disabled {
+  opacity: 0.25;
+  cursor: auto;
+  pointer-events: none;
+}

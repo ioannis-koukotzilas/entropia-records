@@ -72,6 +72,7 @@ function monoscopic_scripts()
 	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
 	
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper-bundle.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('components', get_template_directory_uri() . '/src/css/components.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('playlist', get_template_directory_uri() . '/src/css/playlist.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('single-product', get_template_directory_uri() . '/src/css/single-product.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('archive-product', get_template_directory_uri() . '/src/css/archive-product.css', array(), _MONOSCOPIC_VERSION);

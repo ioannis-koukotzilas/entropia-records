@@ -57,7 +57,7 @@
   height: 1px;
   top: 7px;
   left: 0;
-  background-color: var(--border-default);
+  background-color: var(--bg-dark);
 }
 
 .audio-player-progress {
@@ -90,11 +90,15 @@
   color: var(--text-primary);
   /* padding: 0.25rem 0; */
   margin-bottom: 0.25rem;
+  padding-bottom: 0.25rem;
+  
 }
 
-/* .audio-track:not(:last-of-type) {
-  border-bottom: 1px solid var(--border-primary);
-} */
+
+
+.audio-track:not(:last-child) {
+  border-bottom: 1px solid var(--border-light);
+}
 
 .audio-track:hover {
   cursor: pointer;

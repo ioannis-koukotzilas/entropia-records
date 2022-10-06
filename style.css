@@ -106,7 +106,7 @@ html {
 .dark-mode {
   --bg-default: #141414;
   --bg-dark: #e0e0e0;
-  --bg-accent: #70b5f9;
+  --bg-accent: aquamarine;
   --bg-danger: #f59778;
 
   --text-default: #e0e0e0;
@@ -114,7 +114,8 @@ html {
   --text-dark: #141414;
 
   --border-default: #3d3d3d;
-  --text-accent: #70b5f9;
+  --border-light: #292929;
+  --text-accent: aquamarine;
 }
 
 /* Primary */
@@ -133,7 +134,7 @@ html {
 --------------------------------------------- */
 
 html {
-  font-size: 15px;
+  font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }

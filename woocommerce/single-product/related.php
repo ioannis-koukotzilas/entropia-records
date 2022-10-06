@@ -38,10 +38,6 @@ if ($related_products) : ?>
 
 			<div class="products-slider">
 
-				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-
 				<?php woocommerce_product_loop_start(); ?>
 
 				<?php foreach ($related_products as $related_product) : ?>
@@ -57,6 +53,11 @@ if ($related_products) : ?>
 				<?php endforeach; ?>
 
 				<?php woocommerce_product_loop_end(); ?>
+
+				<div class="navigation">
+					<div class="prev icon"></div>
+					<div class="next icon"></div>
+				</div>
 
 			</div>
 

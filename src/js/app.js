@@ -28,7 +28,7 @@ const spotlight = new Swiper('.spotlight', {
 });
 
 // Product gallery
-const swiper = new Swiper('.product-images', {
+const swiper = new Swiper('.product-gallery .slider', {
   speed: 500,
   spaceBetween: 0,
   autoHeight: true,
@@ -37,8 +37,8 @@ const swiper = new Swiper('.product-images', {
     // minimumVelocity: 0.5,
   },
   navigation: {
-    nextEl: '#s-next',
-    prevEl: '#s-prev',
+    nextEl: '.next',
+    prevEl: '.prev',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -54,6 +54,10 @@ const ioannis = new Swiper('.products-slider', {
   slideClass: 'product',
   slidesPerView: 'auto',
   spaceBetween: 10,
+  navigation: {
+    nextEl: '.next',
+    prevEl: '.prev',
+  },
   freeMode: {
     enabled: true,
     sticky: true,
