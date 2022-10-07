@@ -276,11 +276,16 @@ form.checkout {
 # Experimets
 --------------------------------------------------------------*/
 
+.block-header .headline {
+  margin-bottom: 1.5rem;
+}
+
 /* Vertical Styles */
 
 @media (min-width: 1280px) {
   .archive .site-main,
   .single-product div.product .main,
+  .audio-player,
   .single-product .upsells,
   .single-product .related,
   .brand {
@@ -293,8 +298,12 @@ form.checkout {
     padding: 3rem 20px 3rem calc(3rem + 40px);
   }
 
+ 
+
+
   .archive .site-main::before,
   .single-product div.product .main::before,
+  .audio-player::before,
   .single-product .upsells::before,
   .single-product .related::before,
   .brand::before {
@@ -308,7 +317,7 @@ form.checkout {
     z-index: 0;
   }
 
-  .block-title,
+  .block-header,
   .results-count__container {
     position: absolute;
     top: 0;
@@ -316,7 +325,7 @@ form.checkout {
     height: 100%;
   }
 
-  .block-title > h2,
+  .block-header .headline,
   .results-count .facetwp-facet-results_count {
     position: sticky;
     top: calc(3rem + 20px);

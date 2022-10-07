@@ -31,8 +31,8 @@ if ($upsells) : ?>
 
 			if ($heading) :
 			?>
-				<div class="block-title">
-					<h2><?php echo esc_html($heading); ?></h2>
+				<div class="block-header">
+					<h2 class="headline"><?php echo esc_html($heading); ?></h2>
 				</div>
 			<?php endif; ?>
 

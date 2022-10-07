@@ -2,30 +2,22 @@
 # Audio Player
 --------------------------------------------------------------*/
 
-.audio-player {
-  /* margin: 1.5rem 0; */
-  position: relative;
-}
-
-.audio-player::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(3rem + 20px);
-  height: 100%;
-  border-right: 1px solid var(--border-default);
-  z-index: 0;
+@media (max-width: 1279px) {
+  .audio-player > .container {
+    padding: 0 20px 3rem;
+  }
 }
 
 .audio-player > .container {
   max-width: var(--max-width-default);
   margin: 0 auto;
-  padding: 3rem 20px;
-  padding: 0 20px 3rem calc(3rem + 40px);
 }
 
-
+@media (min-width: 1280px) {
+  .audio-player > .container {
+    padding: 0 20px 3rem calc(3rem + 40px);
+  }
+}
 
 .audio-player-play-time,
 .audio-player-duration {
@@ -51,7 +43,7 @@
 
 .audio-player-timebar::before {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 1px;
@@ -91,10 +83,7 @@
   /* padding: 0.25rem 0; */
   margin-bottom: 0.25rem;
   padding-bottom: 0.25rem;
-  
 }
-
-
 
 .audio-track:not(:last-child) {
   border-bottom: 1px solid var(--border-light);
@@ -104,8 +93,6 @@
   cursor: pointer;
   color: var(--text-accent);
 }
-
-
 
 .audio-track .icon::after {
   font-size: var(--font-size-md);

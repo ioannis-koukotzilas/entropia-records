@@ -11,6 +11,15 @@
   z-index: 1;
 }
 
+.product-gallery .slider .swiper-pagination-fraction {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background: var(--bg-default);
+  padding: 0.25rem 0.5rem;
+}
+
 @media screen and (max-width: 959px) {
   .product-gallery .navigation .prev,
   .product-gallery .navigation .next {
@@ -112,7 +121,6 @@
   display: flex;
   gap: 0.25rem;
   justify-content: end;
-  margin-top: 1.5rem;
 }
 
 .products-slider .navigation .icon {
@@ -120,6 +128,7 @@
   color: var(--text-light);
   font-size: var(--font-size-xl);
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .products-slider .navigation .prev:after {
