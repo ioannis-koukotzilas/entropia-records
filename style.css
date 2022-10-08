@@ -71,12 +71,36 @@ html {
   font-weight: bold;
 }
 
+/* Lars */
+
+@font-face {
+  font-family: 'Lars';
+  src: url('../monoscopic/src/fonts/lars/lars-regular.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lars';
+  src: url('../monoscopic/src/fonts/lars/lars-bold.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Takbolo';
+  src: url('../monoscopic/src/fonts/takbolo/taklobo-display.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 /* Theme Variables
 --------------------------------------------- */
 
 /* Root */
 :root {
-  --font-default: 'GT-America', sans-serif;
+  --font-default: 'Lars', sans-serif;
 
   --font-size-xs: 0.64rem;
   --font-size-sm: 0.8rem;
@@ -147,7 +171,7 @@ optgroup,
 textarea {
   color: var(--text-default);
   font-family: var(--font-default);
-  font-feature-settings: 'pnum' 1, 'kern' 1, 'ss01' 1, 'ss03' 1;
+  /* font-feature-settings: 'pnum' 1, 'kern' 1, 'ss01' 1, 'ss03' 1; */
   font-weight: var(--font-weight-default);
   font-size: 1rem;
   line-height: 1.3;

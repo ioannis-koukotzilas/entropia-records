@@ -50,6 +50,7 @@
 .site-footer .site-title h1 {
   font-size: 4.5vw;
   line-height: 1;
+  font-family: 'Takbolo';
 }
 
 /* Site Footer Nav
@@ -292,6 +293,7 @@ form.checkout {
     position: relative;
   }
 
+  .archive .site-main > .container,
   .single-product div.product .main > .container,
   .single-product .upsells > .container,
   .single-product .related > .container {

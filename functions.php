@@ -67,40 +67,59 @@ function monoscopic_scripts()
 	wp_enqueue_style('normalize', get_template_directory_uri() . '/src/css/normalize.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('style', get_stylesheet_uri(), array(), _MONOSCOPIC_VERSION);
 
-	
+	// Swiper
+	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
 
 	if (is_product()) {
-		
+
+		// DotDotDot
 		wp_enqueue_script('dotdotdot', get_template_directory_uri() . '/src/js/dotdotdot.js', array(), _MONOSCOPIC_VERSION, true);
 
+		// Product
+		wp_enqueue_style('product', get_template_directory_uri() . '/src/css/product.css', array(), _MONOSCOPIC_VERSION);
+		wp_enqueue_script('product', get_template_directory_uri() . '/src/js/product.js', array(), _MONOSCOPIC_VERSION, true);
+		
+		// Audio Player
 		wp_enqueue_style('audio-player', get_template_directory_uri() . '/src/css/audio-player.css', array(), _MONOSCOPIC_VERSION);
-		wp_enqueue_script('playlist', get_template_directory_uri() . '/src/js/playlist.js', array(), _MONOSCOPIC_VERSION, true);
+		wp_enqueue_script('audio-player', get_template_directory_uri() . '/src/js/audio-player.js', array(), _MONOSCOPIC_VERSION, true);
 	}
 
-	
+	if (is_product_category() || is_product_tag()) {
+		wp_enqueue_script('products', get_template_directory_uri() . '/src/js/products.js', array(), _MONOSCOPIC_VERSION, true);
+	}
+
+
 	wp_enqueue_style('header', get_template_directory_uri() . '/src/css/header.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
-	
-	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('components', get_template_directory_uri() . '/src/css/components.css', array(), _MONOSCOPIC_VERSION);
 	
-	wp_enqueue_style('product', get_template_directory_uri() . '/src/css/single-product.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('products', get_template_directory_uri() . '/src/css/archive-product.css', array(), _MONOSCOPIC_VERSION);
+
+
+	wp_enqueue_style('products', get_template_directory_uri() . '/src/css/products.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/facets.css', array(), _MONOSCOPIC_VERSION);
 
 	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/app.css', array(), _MONOSCOPIC_VERSION);
 
 	
-	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
-	
 	wp_enqueue_script('navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('app', get_template_directory_uri() . '/src/js/app.js', array(), _MONOSCOPIC_VERSION, true);
 
-	wp_dequeue_style('wp-block-library');
-	wp_dequeue_style('wp-block-library-theme');
-	wp_dequeue_style('global-styles');
-	wp_dequeue_style('wc-blocks-style');
+	// wp_dequeue_style('wp-block-library');
+	// wp_dequeue_style('wp-block-library-theme');
+	// wp_dequeue_style('global-styles');
+	// wp_dequeue_style('wc-blocks-style');
 
+	// Remove CSS on the front end.
+    wp_dequeue_style( 'wp-block-library' );
+
+    // Remove Gutenberg theme.
+    wp_dequeue_style( 'wp-block-library-theme' );
+
+    // Remove inline global CSS on the front end.
+    wp_dequeue_style( 'global-styles' );
+
+	// Remove select 2.
 	wp_dequeue_script('select2');
 	wp_dequeue_style('select2');
 	wp_dequeue_script('selectWoo');

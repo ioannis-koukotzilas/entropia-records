@@ -5,7 +5,7 @@
 			<div class="brand__container">
 				<div class="brand-logo"></div>
 				<div class="site-title">
-					<h1>Entropia Records</h1>
+					<h1>Entropia</h1>
 					<p class="tagline">An aural introduction to chaos</p>
 				</div>
 			</div>

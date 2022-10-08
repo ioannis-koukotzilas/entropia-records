@@ -129,7 +129,7 @@ add_action('woocommerce_before_shop_loop', 'add_facets', 15);
 // Scroll on any facet interaction
 
 add_action('wp_head', function () { ?>
-  <script>
+  <!-- <script>
     (function($) {
       $(document).on('facetwp-refresh', function() {
         if (FWP.soft_refresh == true) {
@@ -146,5 +146,5 @@ add_action('wp_head', function () { ?>
         }
       });
     })(jQuery);
-  </script>
+  </script> -->
 <?php });
