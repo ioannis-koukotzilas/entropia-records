@@ -50,7 +50,7 @@ function monoscopic_product_title()
  * Attributes
  */
 
-// Arstist attribute archive link.
+// Artist attribute archive link.
 function monoscopic_attribute_link_artist()
 {
 	global $post;
@@ -67,6 +67,27 @@ function monoscopic_attribute_link_artist()
 					array_push($terms_array, $full_line);
 				}
 				echo '<h1 class="artist">' . implode(', ', $terms_array) . '</h1>';
+			}
+		}
+	}
+}
+
+// Artist attribute name.
+function monoscopic_attribute_name_artist()
+{
+	global $post;
+	$attribute_names = ['pa_artist'];
+	foreach ($attribute_names as $attribute_name) {
+		$taxonomy = get_taxonomy($attribute_name);
+		if ($taxonomy && !is_wp_error($taxonomy)) {
+			$terms = wp_get_post_terms($post->ID, $attribute_name);
+			$terms_array = [];
+			if (!empty($terms)) {
+				foreach ($terms as $term) {
+					$full_line = $term->name;
+					array_push($terms_array, $full_line);
+				}
+				echo implode(', ', $terms_array);
 			}
 		}
 	}
@@ -178,7 +199,7 @@ function monoscopic_audio_player()
 					<div class="audio-playback">
 						<div class="audio-player-play-btn">
 							<span class="icon"></span>
-							<div class="playlist-title"><?php esc_html_e('Listen to:', 'monoscopic'); ?> <?php the_field('product_title'); ?></div>
+							<div class="playlist-title"><?php esc_html_e('Listen to:', 'monoscopic'); ?> <?php the_field('product_title'); ?> <?php esc_html_e('by', 'monoscopic'); ?> <?php monoscopic_attribute_name_artist() ?></div>
 						</div>
 						<div class="audio-player-play-time">0:00</div>
 						<div class="audio-player-timebar">

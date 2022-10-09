@@ -17,10 +17,12 @@
 
 			<nav class="navbar">
 				<div class="container">
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">Entropia Records</a></h1>
 					<?php wp_nav_menu(['theme_location' => 'main-menu', 'menu_id' => 'main-menu', 'container' => '']); ?>
-					<div id="toggle-theme">Dark Mode</div>
-					<?php monoscopic_woocommerce_header_cart(); ?>
+					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">Entropia Records</a></h1>
+					<div class="components">
+						<div id="toggle-theme">Dark Mode</div>
+						<?php monoscopic_woocommerce_header_cart(); ?>
+					</div>	
 				</div>
 			</nav>
 

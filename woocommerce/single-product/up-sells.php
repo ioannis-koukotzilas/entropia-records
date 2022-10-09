@@ -54,11 +54,6 @@ if ($upsells) : ?>
 
 				<?php woocommerce_product_loop_end(); ?>
 
-				<div class="navigation">
-					<div class="prev icon"></div>
-					<div class="next icon"></div>
-				</div>
-
 			</div>
 
 		</div>

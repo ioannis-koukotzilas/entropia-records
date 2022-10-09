@@ -2,20 +2,31 @@
 # Audio Player
 --------------------------------------------------------------*/
 
-@media (max-width: 1279px) {
-  .audio-player > .container {
-    padding: 0 20px 3rem;
-  }
+.audio-player {
+  position: relative;
+  background-color: var(--bg-default);
+  border-top: 1px solid var(--border-default);
 }
 
 .audio-player > .container {
   max-width: var(--max-width-default);
   margin: 0 auto;
+  padding: 3rem 20px;
 }
 
 @media (min-width: 1280px) {
+  .audio-player::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(40px + 1rem);
+    height: 100%;
+    border-right: 1px solid var(--border-default);
+    z-index: 0;
+  }
   .audio-player > .container {
-    padding: 0 20px 3rem calc(3rem + 40px);
+    padding: 3rem 20px 3rem calc(40px + 1rem);
   }
 }
 
@@ -29,7 +40,6 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  /* margin-bottom: 0.5rem; */
 }
 
 .audio-player-timebar {
@@ -84,7 +94,6 @@
 .audio-track:not(:last-child) .icon {
   margin-bottom: 0.25rem;
   padding-bottom: 0.25rem;
-  /* border-bottom: 1px solid var(--border-default); */
 }
 
 .audio-track:not(:last-child) .audio-track-name {
@@ -134,6 +143,3 @@
   flex-grow: 1;
 }
 
-/* .audio-track-length {
-  font-size: var(--font-size-sm);
-} */

@@ -71,6 +71,12 @@ function monoscopic_scripts()
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
 
+	
+
+	if (is_front_page()) {
+		wp_enqueue_style('home', get_template_directory_uri() . '/src/css/home.css', array(), _MONOSCOPIC_VERSION);
+	}
+
 	if (is_product()) {
 
 		// DotDotDot
@@ -79,29 +85,30 @@ function monoscopic_scripts()
 		// Product
 		wp_enqueue_style('product', get_template_directory_uri() . '/src/css/product.css', array(), _MONOSCOPIC_VERSION);
 		wp_enqueue_script('product', get_template_directory_uri() . '/src/js/product.js', array(), _MONOSCOPIC_VERSION, true);
-		
+
+		// Product Gallery
+		wp_enqueue_style('product-gallery', get_template_directory_uri() . '/src/css/product-gallery.css', array(), _MONOSCOPIC_VERSION);
+
 		// Audio Player
 		wp_enqueue_style('audio-player', get_template_directory_uri() . '/src/css/audio-player.css', array(), _MONOSCOPIC_VERSION);
 		wp_enqueue_script('audio-player', get_template_directory_uri() . '/src/js/audio-player.js', array(), _MONOSCOPIC_VERSION, true);
 	}
 
 	if (is_product_category() || is_product_tag()) {
-		wp_enqueue_script('products', get_template_directory_uri() . '/src/js/products.js', array(), _MONOSCOPIC_VERSION, true);
+
+
+		wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/facets.css', array(), _MONOSCOPIC_VERSION);
 	}
 
-
-	wp_enqueue_style('header', get_template_directory_uri() . '/src/css/header.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('components', get_template_directory_uri() . '/src/css/components.css', array(), _MONOSCOPIC_VERSION);
-	
-
-
 	wp_enqueue_style('products', get_template_directory_uri() . '/src/css/products.css', array(), _MONOSCOPIC_VERSION);
-	wp_enqueue_style('facets', get_template_directory_uri() . '/src/css/facets.css', array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_script('products', get_template_directory_uri() . '/src/js/products.js', array(), _MONOSCOPIC_VERSION, true);
+
+
+	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
 
 	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/app.css', array(), _MONOSCOPIC_VERSION);
 
-	
+
 	wp_enqueue_script('navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), _MONOSCOPIC_VERSION, true);
 	wp_enqueue_script('app', get_template_directory_uri() . '/src/js/app.js', array(), _MONOSCOPIC_VERSION, true);
 
@@ -111,13 +118,13 @@ function monoscopic_scripts()
 	// wp_dequeue_style('wc-blocks-style');
 
 	// Remove CSS on the front end.
-    wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style('wp-block-library');
 
-    // Remove Gutenberg theme.
-    wp_dequeue_style( 'wp-block-library-theme' );
+	// Remove Gutenberg theme.
+	wp_dequeue_style('wp-block-library-theme');
 
-    // Remove inline global CSS on the front end.
-    wp_dequeue_style( 'global-styles' );
+	// Remove inline global CSS on the front end.
+	wp_dequeue_style('global-styles');
 
 	// Remove select 2.
 	wp_dequeue_script('select2');
@@ -150,6 +157,7 @@ if (class_exists('WooCommerce')) {
  * Facets compatibility file.
  */
 require get_template_directory() . '/inc/facets-setup.php';
+
 
 
 

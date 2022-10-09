@@ -2,9 +2,31 @@
 Swiper
 */
 
+function swiperNavigation(target) {
+  const slider = document.querySelector(target);
+
+  if (slider) {
+    const navigation = document.createElement('div');
+    const prevBtn = document.createElement('div');
+    const nextBtn = document.createElement('div');
+
+    navigation.classList.add('navigation');
+    prevBtn.classList.add('prev', 'icon');
+    nextBtn.classList.add('next', 'icon');
+
+    slider.appendChild(navigation);
+    navigation.appendChild(prevBtn);
+    navigation.appendChild(nextBtn);
+  }
+}
+
+swiperNavigation('.upsells .products-slider');
+swiperNavigation('.related .products-slider');
+swiperNavigation('.featured .products-slider');
+
 // Products slider
 
-const ioannis = new Swiper('.products-slider', {
+const productsSlider = new Swiper('.products-slider', {
   // Default parameters
   wrapperClass: 'products',
   slideClass: 'product',
@@ -16,7 +38,6 @@ const ioannis = new Swiper('.products-slider', {
   },
   freeMode: {
     enabled: true,
-    // sticky: true,
   },
   // Responsive breakpoints
   breakpoints: {
@@ -53,3 +74,7 @@ function toggleTheme(target) {
 }
 
 toggleTheme('#toggle-theme');
+
+/**
+ * Test
+ */

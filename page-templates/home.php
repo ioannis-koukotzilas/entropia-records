@@ -51,6 +51,20 @@ get_header();
 		<h1>This is a development site.</h1>
 		<p>Please hold on or mail at webmaster AT monoscopic DOT net</p>
 
+		<div class="featured">
+			<div class="container">
+				<div class="block-header">
+					<h2 class="headline">Featured</h2>
+				</div>
+				<?php echo do_shortcode('[products class="products-slider" limit="12" orderby="menu_order" visibility="featured" category="records" cat_operator="IN" tag="preorder" tag_operator="NOT IN"]'); ?>
+			</div>
+
+		</div>
+
+		
+
+		
+
 	</div>
 
 </main>

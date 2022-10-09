@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+# Spotlight
+--------------------------------------------------------------*/
+
+.spotlight {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  /* list-style: none; */
+  padding: 0;
+  z-index: 1;
+}
+
+.spotlight > .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0, 0);
+}
+
+.spotlight .slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: calc(100vh - calc(3rem + 20px));
+}
+
+.left img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid var(--border-default);
+}
+
+.right {
+  float: left;
+  width: 50%;
+  height: calc(100vh - calc(3rem + 20px));
+  background-color: var(--bg-default);
+  color: var(--text-default);
+  /* border-left: 1px solid var(--border-primary); */
+}
+
+.right .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.right .container h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 1.5rem;
+}
+
+.spotlight .slide::after {
+  content: '';
+  display: table;
+  clear: both;
+}

@@ -27,8 +27,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /* Box sizing
 --------------------------------------------- */
 
-/* Inherit box-sizing to more easily change it's value on a component level.
-@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
 *::before,
 *::after {
@@ -50,50 +48,35 @@ html {
 
 @font-face {
   font-family: 'Material';
+  font-style: normal;
+  font-weight: normal;
   src: url('../monoscopic/src/fonts/material/material.woff2') format('woff2'), url('../monoscopic/src/fonts/material/material.woff') format('woff');
-  font-style: normal;
-  font-weight: normal;
-}
-
-/* GT-America */
-
-@font-face {
-  font-family: 'GT-America';
-  src: url('../monoscopic/src/fonts/gt-america/GT-America-LCGV-Extended-Medium.woff2') format('woff2'), url('../monoscopic/src/fonts/gt-america/GT-America-LCGV-Extended-Medium.woff') format('woff');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'GT-America';
-  src: url('../monoscopic/src/fonts/gt-america/GT-America-LCGV-Extended-Bold.woff2') format('woff2'), url('../monoscopic/src/fonts/gt-america/GT-America-LCGV-Extended-Bold.woff') format('woff');
-  font-style: normal;
-  font-weight: bold;
 }
 
 /* Lars */
 
 @font-face {
   font-family: 'Lars';
-  src: url('../monoscopic/src/fonts/lars/lars-regular.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-regular.woff') format('woff');
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  src: url('../monoscopic/src/fonts/lars/lars-regular.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lars';
-  src: url('../monoscopic/src/fonts/lars/lars-bold.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-bold.woff') format('woff');
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
+  src: url('../monoscopic/src/fonts/lars/lars-bold.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-bold.woff') format('woff');
 }
+
+/* Takbolo */
 
 @font-face {
   font-family: 'Takbolo';
-  src: url('../monoscopic/src/fonts/takbolo/taklobo-display.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
+  src: url('../monoscopic/src/fonts/takbolo/taklobo-display.woff2') format('woff2');
 }
-
 
 /* Theme Variables
 --------------------------------------------- */
@@ -108,8 +91,8 @@ html {
   --font-size-lg: 1.563rem;
   --font-size-xl: 1.953rem;
 
-  --font-weight-default: normal;
-  --font-weight-bold: bold;
+  --font-weight-default: 400;
+  --font-weight-bold: 700;
 
   --bg-default: #ffffff;
   --bg-dark: #141414;
@@ -120,9 +103,9 @@ html {
   --text-dark: #141414;
   --text-accent: #01a99e;
 
-  --border-default: #999999;
+  --border-default: #ccc;
 
-  --max-width-default: 1200px;
+  --max-width-default: 1140px;
   --max-width-xl: 2560px;
 }
 
@@ -171,7 +154,6 @@ optgroup,
 textarea {
   color: var(--text-default);
   font-family: var(--font-default);
-  /* font-feature-settings: 'pnum' 1, 'kern' 1, 'ss01' 1, 'ss03' 1; */
   font-weight: var(--font-weight-default);
   font-size: 1rem;
   line-height: 1.3;
@@ -290,8 +272,6 @@ a:visited {
 a:hover {
   color: var(--text-accent);
 }
-
-
 
 a:focus,
 a:hover,
