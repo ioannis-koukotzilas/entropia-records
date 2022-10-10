@@ -161,3 +161,6 @@ require get_template_directory() . '/inc/facets-setup.php';
 
 
 
+add_filter('perfmatters_fade_in_speed', function($speed) {
+	return 10000; //speed in ms
+  });

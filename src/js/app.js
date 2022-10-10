@@ -1,10 +1,13 @@
-/*
-Swiper
-*/
+/**
+ * Products Slider
+ */
+
+// Add swiper navigation buttons
 
 function swiperNavigation(target) {
   const slider = document.querySelector(target);
 
+  // Check if slider exists
   if (slider) {
     const navigation = document.createElement('div');
     const prevBtn = document.createElement('div');
@@ -24,10 +27,16 @@ swiperNavigation('.upsells .products-slider');
 swiperNavigation('.related .products-slider');
 swiperNavigation('.featured .products-slider');
 
-// Products slider
+
 
 const productsSlider = new Swiper('.products-slider', {
   // Default parameters
+
+// Disable preloading of all images
+watchSlidesVisibility : true,
+      // preloadImages: false,
+      lazy: false,
+
   wrapperClass: 'products',
   slideClass: 'product',
   slidesPerView: 'auto',

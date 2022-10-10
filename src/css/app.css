@@ -53,7 +53,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .site-header .navbar .site-title a::before {
@@ -93,10 +93,6 @@
   align-items: center;
   gap: 20px;
 }
-
-
-
-
 
 /* Panels
   --------------------------------------------- */
@@ -408,4 +404,8 @@ details summary::-webkit-details-marker {
 .page-template-default .entry-header .entry-title {
   font-size: var(--font-size-xl);
   margin-bottom: 1.5rem;
+}
+
+img.perfmatters-lazy {
+  background: url(../assets/oval.svg) no-repeat 50% 50%; 
 }
