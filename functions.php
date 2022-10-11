@@ -103,6 +103,12 @@ function monoscopic_scripts()
 	wp_enqueue_style('products', get_template_directory_uri() . '/src/css/products.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_script('products', get_template_directory_uri() . '/src/js/products.js', array(), _MONOSCOPIC_VERSION, true);
 
+	
+
+	if (is_cart()) {
+		wp_enqueue_style('cart', get_template_directory_uri() . '/src/css/cart.css', array(), _MONOSCOPIC_VERSION);
+	}
+
 
 	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
 
@@ -116,6 +122,8 @@ function monoscopic_scripts()
 	// wp_dequeue_style('wp-block-library-theme');
 	// wp_dequeue_style('global-styles');
 	// wp_dequeue_style('wc-blocks-style');
+
+	
 
 	// Remove CSS on the front end.
 	wp_dequeue_style('wp-block-library');

@@ -5,6 +5,8 @@ Swiper
 // Product gallery
 const swiper = new Swiper('.product-gallery .slider', {
   speed: 500,
+  preloadImages: false,
+  watchSlidesVisibility : true,
   spaceBetween: 0,
   autoHeight: true,
   freeMode: {

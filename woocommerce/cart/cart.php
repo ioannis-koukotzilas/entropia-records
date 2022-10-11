@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
-				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Item', 'woocommerce' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
@@ -51,6 +51,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
 						} else {
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+						}
+
+						// Format Attribute.
+						$format = $_product->get_attribute( 'pa_format' );
+						if ( !empty( $format ) ) {
+							echo '<div class="format">' . $format . '</div>';
 						}
 
 						do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );

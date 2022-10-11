@@ -161,7 +161,7 @@ function monoscopic_product_container_open()
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 40);
 
     // Add the audio player.
-    add_action('woocommerce_after_single_product_summary', 'monoscopic_audio_player', 10);
+    add_action('woocommerce_single_product_summary', 'monoscopic_audio_player', 40);
 
     /**
      * 

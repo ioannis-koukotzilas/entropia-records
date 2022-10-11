@@ -20,9 +20,10 @@
 					<?php wp_nav_menu(['theme_location' => 'main-menu', 'menu_id' => 'main-menu', 'container' => '']); ?>
 					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">Entropia Records</a></h1>
 					<div class="components">
+						<div class="modal-open" data-id="demo-modal">Search</div>
 						<div id="toggle-theme">Dark Mode</div>
 						<?php monoscopic_woocommerce_header_cart(); ?>
-					</div>	
+					</div>
 				</div>
 			</nav>
 
@@ -47,3 +48,21 @@
 			</div>
 
 		</header>
+
+
+		<div id="demo-modal" class="modal" role="dialog" tabindex="-1">
+			<div class="model-inner">
+				<button class="modal-close" data-id="demo-modal" aria-label="Close">&times;</button>
+				<div>
+					Natus earum velit ab nobis eos. Sed et exercitationem voluptatum omnis
+					dolor voluptates. Velit ut ipsam sunt ipsam nostrum. Maiores officia
+					accusamus qui sapiente. Dolor qui vel placeat dolor nesciunt quo dolor
+					dolores. Quo accusamus hic atque nisi minima.
+				</div>
+			</div>
+		</div>
+		
+
+
+		
+			

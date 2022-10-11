@@ -17,6 +17,8 @@ $post_thumbnail_id = $product->get_image_id();
 ?>
 <div class="product-gallery">
 
+<div class="container">
+
 	<div class="slider">
 		<div class="swiper-wrapper">
 			<?php
@@ -49,6 +51,8 @@ $post_thumbnail_id = $product->get_image_id();
 		</div>
 
 		<div class="swiper-pagination"></div>
+
+	</div>
 
 	</div>
 

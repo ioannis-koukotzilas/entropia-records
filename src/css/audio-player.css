@@ -3,18 +3,18 @@
 --------------------------------------------------------------*/
 
 .audio-player {
-  position: relative;
+  /* position: relative; */
   background-color: var(--bg-default);
   border-top: 1px solid var(--border-default);
 }
 
 .audio-player > .container {
-  max-width: var(--max-width-default);
-  margin: 0 auto;
-  padding: 3rem 20px;
+  /* max-width: var(--max-width-default); */
+  /* margin: 0 auto; */
+  padding: 3rem 0;
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .audio-player::before {
     content: '';
     position: absolute;
@@ -28,7 +28,7 @@
   .audio-player > .container {
     padding: 3rem 20px 3rem calc(40px + 1rem);
   }
-}
+} */
 
 .audio-player-play-time,
 .audio-player-duration {

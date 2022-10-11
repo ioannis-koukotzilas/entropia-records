@@ -57,7 +57,7 @@
 }
 
 .site-header .navbar .site-title a::before {
-  content: url(../assets/logo-entropia-black.svg);
+  content: url(../svg/logo-entropia-black.svg);
   width: 1.953rem;
   height: auto;
   margin-right: 0.75rem;
@@ -189,8 +189,8 @@
 } */
 
 .site-footer .site-title h1 {
-  font-size: 4.5vw;
-  line-height: 1;
+  font-size: 6.5vw;
+  line-height: 100%;
   font-family: 'Takbolo';
 }
 
@@ -407,5 +407,50 @@ details summary::-webkit-details-marker {
 }
 
 img.perfmatters-lazy {
-  background: url(../assets/oval.svg) no-repeat 50% 50%; 
+  background: url(../svg/oval.svg) no-repeat 50% 50%; 
+}
+
+
+
+
+/* Modal */
+
+.modal {
+  display: none;
+  /* align-items: center;
+  justify-content: center; */
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.modal[open] {
+  display: block;
+}
+
+.model-inner {
+  background-color: var(--bg-default);
+  max-width:2560px;
+  padding: 20px;
+  margin: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+#modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: black;
+  opacity: 0.75;  
 }

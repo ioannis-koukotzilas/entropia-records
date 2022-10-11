@@ -1,71 +1,4 @@
-/*
-Theme Name: Monoscopic
 
-WooCommerce styles override
-*/
-
-/**
- * Shop tables
- */
-table.shop_table_responsive thead {
-  display: none;
-}
-
-table.shop_table_responsive tbody th {
-  display: none;
-}
-
-table.shop_table_responsive tr td {
-  display: block;
-  clear: both;
-}
-
-table.shop_table_responsive tr td::before {
-  content: attr(data-title) ":\00a0";
-  float: left;
-}
-
-table.shop_table_responsive tr td.product-remove a {
-  text-align: left;
-}
-
-table.shop_table_responsive tr td.product-remove::before {
-  display: none;
-}
-
-table.shop_table_responsive tr td.actions::before,
-table.shop_table_responsive tr td.download-actions::before {
-  display: none;
-}
-
-table.shop_table_responsive tr td.download-actions .button {
-  display: block;
-  text-align: center;
-}
-
-@media screen and (min-width: 840px) {
-  table.shop_table_responsive thead {
-    display: table-header-group;
-  }
-
-  table.shop_table_responsive tbody th {
-    display: table-cell;
-  }
-
-  table.shop_table_responsive tr th,
-  table.shop_table_responsive tr td {
-    text-align: left;
-    vertical-align: top;
-  }
-
-  table.shop_table_responsive tr td {
-    display: table-cell;
-  }
-
-  table.shop_table_responsive tr td::before {
-    display: none;
-  }
-}
 
 /**
  * Single product
@@ -181,7 +114,7 @@ table.shop_table_responsive tr td.download-actions .button {
 .woocommerce-notices-wrapper > ul,
 .woocommerce-notices-wrapper > div {
   margin: 0 auto 1.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 20px;
   list-style: none;
   color: var(--text-dark);
   font-size: var(--font-size-sm);
@@ -191,7 +124,7 @@ table.shop_table_responsive tr td.download-actions .button {
   background-color: var(--bg-accent);
 }
 
-.woocommerce-notices-wrapper .woocommerce-error{
+.woocommerce-notices-wrapper .woocommerce-error {
   background-color: var(--bg-danger);
 }
 
@@ -210,9 +143,18 @@ table.shop_table_responsive tr td.download-actions .button {
 }
 
 .woocommerce-store-notice__dismiss-link {
-  content: url("../monoscopic/src/icons/close_white_24dp.svg");
+  content: url('../monoscopic/src/icons/close_white_24dp.svg');
   display: block;
   margin-left: 20px;
   width: 1.3em;
   height: 1.3em;
+}
+
+/**
+ * Block Overlay
+ */
+
+
+div.blockOverlay {
+  background-color: transparent !important;
 }
