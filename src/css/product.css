@@ -14,9 +14,6 @@
 }
 
 @media (min-width: 960px) {
-  /* .single-product .site-main > .product .main > .container {
-    padding: 3rem 20px;
-  } */
   .single-product .site-main > .product .main > .container::after {
     content: '';
     display: table;
@@ -24,41 +21,21 @@
   }
 }
 
-/* @media (min-width: 1280px) {
-  .single-product .site-main > .product .main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(40px + 1rem);
-    height: 100%;
-    border-right: 1px solid var(--border-default);
-    z-index: 0;
-  }
-
-  .single-product .site-main > .product .main > .container {
-    padding: 3rem 20px 3rem calc(40px + 1rem);
-  }
-} */
-
 /* @ product-gallery.css
   --------------------------------------------- */
 
 /* Product Summary
   --------------------------------------------- */
 
-@media (max-width: 959px) {
-  .product .summary {
-    padding: 0 20px;
-    margin: 3rem 0;
-  }
+.product .summary {
+  padding: 0 20px;
+  margin: 3rem 0;
 }
 
 @media (min-width: 960px) {
   .product .summary {
     float: left;
-    width: 50%;
-    padding: 20px;
+    width: 35%;
   }
 }
 
@@ -74,6 +51,7 @@
 
 .product-header .artist {
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-md);
 }
 
 .product-header .product-title {
@@ -107,14 +85,18 @@
 
 .variations_form tr {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.variations_form tr:last-child {
+  margin-bottom: 1.5rem;
 }
 
 .variations_form th {
   display: block;
   text-align: left;
   font-weight: normal;
-  margin-bottom: 0.125rem;
+  margin-bottom: 0.25rem;
 }
 
 .variations_form td {
@@ -122,11 +104,11 @@
 }
 
 .variations_form td select {
-  width: 100%;
+  max-width: 320px;
 }
 
 .reset_variations {
-  margin: 1rem 0 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .woocommerce-variation-price {

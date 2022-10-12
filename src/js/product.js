@@ -4,14 +4,17 @@ Swiper
 
 // Product gallery
 const swiper = new Swiper('.product-gallery .slider', {
-  speed: 500,
   preloadImages: false,
-  watchSlidesVisibility : true,
-  spaceBetween: 0,
+  speed: 300,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
   autoHeight: true,
-  freeMode: {
-    enabled: true,
-    // minimumVelocity: 0.5,
+  breakpoints: {
+    768: {
+      autoHeight: false,
+    },
   },
   navigation: {
     nextEl: '.next',

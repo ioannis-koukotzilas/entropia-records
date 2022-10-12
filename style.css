@@ -53,20 +53,20 @@ html {
   src: url('../monoscopic/src/fonts/material/material.woff2') format('woff2'), url('../monoscopic/src/fonts/material/material.woff') format('woff');
 }
 
-/* Lars */
+/* Univers */
 
 @font-face {
-  font-family: 'Lars';
+  font-family: 'Univers';
   font-style: normal;
   font-weight: 400;
-  src: url('../monoscopic/src/fonts/lars/lars-regular.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-regular.woff') format('woff');
+  src: url('../monoscopic/src/fonts/univers/Univers-Next-Regular.woff2') format('woff2'), url('../monoscopic/src/fonts/univers/Univers-Next-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Lars';
+  font-family: 'Univers';
   font-style: normal;
-  font-weight: 700;
-  src: url('../monoscopic/src/fonts/lars/lars-bold.woff2') format('woff2'), url('../monoscopic/src/fonts/lars/lars-bold.woff') format('woff');
+  font-weight: 500;
+  src: url('../monoscopic/src/fonts/univers/Univers-Next-Medium.woff2') format('woff2'), url('../monoscopic/src/fonts/univers/Univers-Next-Medium.woff') format('woff');
 }
 
 /* Takbolo */
@@ -83,7 +83,7 @@ html {
 
 /* Root */
 :root {
-  --font-default: 'Lars', sans-serif;
+  --font-default: 'Univers', sans-serif;
 
   --font-size-xs: 0.64rem;
   --font-size-sm: 0.8rem;
@@ -92,9 +92,10 @@ html {
   --font-size-xl: 2.441rem;
 
   --font-weight-default: 400;
-  --font-weight-bold: 700;
+  --font-weight-md: 500;
 
   --bg-default: #ffffff;
+  --bg-secondary: #eee;
   --bg-dark: #141414;
   --bg-accent: #70b5f9;
 
@@ -112,6 +113,7 @@ html {
 /* Dark Mode */
 .dark-mode {
   --bg-default: #141414;
+  --bg-secondary: #292929;
   --bg-dark: #e0e0e0;
   --bg-accent: aquamarine;
   --bg-danger: #f59778;

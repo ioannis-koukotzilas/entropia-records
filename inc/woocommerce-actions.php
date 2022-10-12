@@ -59,8 +59,8 @@ remove_action('wp_footer', 'woocommerce_demo_store');
  */
 
 // Reposition notices.
-remove_action('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);
-add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', 15 );
+// remove_action('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);
+// add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', 15 );
 
 // Remove default product title.
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);

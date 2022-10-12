@@ -189,10 +189,15 @@
 } */
 
 .site-footer .site-title h1 {
-  font-size: 6.5vw;
+  font-size: 4.5vw;
   line-height: 100%;
   font-family: 'Takbolo';
+  text-transform: uppercase;
 }
+
+
+
+
 
 /* Site Footer Nav
 --------------------------------------------- */
@@ -259,7 +264,7 @@
   }
 
   .archive .site-main > .container {
-    padding: 3rem 20px 3rem calc(3rem + 40px);
+    padding: 3rem 20px;
   }
 
   .archive .site-main::before,
@@ -268,13 +273,13 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: calc(3rem + 20px);
+    left: calc(40px + 1rem);
     height: 100%;
     border-right: 1px solid var(--border-default);
     z-index: 0;
   }
 
-  .results-count__container {
+  /* .results-count__container {
     position: absolute;
     top: 0;
     left: 0;
@@ -287,35 +292,21 @@
     padding: 3rem 20px;
     writing-mode: vertical-lr;
     font-size: var(--font-size-md);
-  }
+  } */
 }
 
 /*--------------------------------------------------------------
 # Products Block
 --------------------------------------------------------------*/
 
-@media (max-width: 1279px) {
+
   .block-header .headline {
+    font-size: var(--font-size-md);
     margin-bottom: 1.5rem;
   }
-}
 
-@media (min-width: 1280px) {
-  .block-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
 
-  .block-header .headline {
-    position: sticky;
-    top: calc(40px + 1rem);
-    padding: 3rem 20px;
-    writing-mode: vertical-lr;
-    line-height: 1;
-  }
-}
+
 
 /*--------------------------------------------------------------
 # Details / Summary
@@ -353,9 +344,14 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-.facetwp-type-pager {
+.facetwp-facet-results_count {
+  font-size: var(--font-size-sm);
+  margin-bottom: 1.5rem;
+}
+
+.facetwp-facet-load_more {
   margin: 3rem auto;
-  max-width: 480px;
+  max-width: 320px;
 }
 
 .facetwp-load-more {

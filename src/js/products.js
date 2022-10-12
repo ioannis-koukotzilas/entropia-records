@@ -8,11 +8,14 @@ document.addEventListener('facetwp-loaded', () => {
 
   const qs = FWP.buildQueryString();
   const resetButton = document.querySelector('.facetwp-reset-button');
-  if ('' === qs) {
-    // no facets are selected
 
-    resetButton.style.display = 'none';
-  } else {
-    resetButton.style.display = 'block';
+  if (resetButton) {
+    if ('' === qs) {
+      // no facets are selected
+
+      resetButton.style.display = 'none';
+    } else {
+      resetButton.style.display = 'block';
+    }
   }
 });

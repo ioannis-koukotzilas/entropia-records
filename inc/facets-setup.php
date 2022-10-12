@@ -43,11 +43,9 @@ add_action('woocommerce_after_shop_loop', 'fwp_add_pager', 20);
 function fwp_results_count()
 {
 ?>
-  <div class="results-count">
-    <div class="results-count__container">
+  
       <?php echo do_shortcode('[facetwp facet="results_count"]'); ?>
-    </div>
-  </div>
+
 <?php
 }
 add_action('woocommerce_before_shop_loop', 'fwp_results_count', 16);
@@ -108,7 +106,7 @@ if (is_product_category()) :
       <?php echo do_shortcode('[facetwp facet="format"]'); ?>
     </div>
     <div class="reset">
-      <a href="javascript:void(0)" class="facetwp-reset-button" onclick="FWP.reset()"><?php esc_html_e('Clear all filters', 'eligo'); ?></a>
+      <div class="facetwp-reset-button" onclick="FWP.reset()"><?php esc_html_e('Clear filter', 'monoscopic'); ?></div>
     </div>
   </div>
 <?php endif;
