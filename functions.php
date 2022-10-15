@@ -112,6 +112,8 @@ function monoscopic_scripts()
 		wp_enqueue_style('cart', get_template_directory_uri() . '/src/css/cart.css', array(), _MONOSCOPIC_VERSION);
 	}
 
+	wp_enqueue_style('event', get_template_directory_uri() . '/src/css/event.css', array(), _MONOSCOPIC_VERSION);
+
 	// wp_dequeue_style('wp-block-library');
 	// wp_dequeue_style('wp-block-library-theme');
 	// wp_dequeue_style('global-styles');
@@ -166,3 +168,38 @@ require get_template_directory() . '/inc/facets-setup.php';
 add_filter('perfmatters_fade_in_speed', function ($speed) {
 	return 10000; //speed in ms
 });
+
+
+
+
+/**
+ * Change Posts Per Page for Event Archive
+ * 
+ * @link https://www.billerickson.net/customize-the-wordpress-query/
+ * @param object $query data
+ *
+ */
+function be_change_event_posts_per_page($query)
+{
+
+	if ($query->is_main_query() && !is_admin() && is_post_type_archive('event')) {
+		$query->set('posts_per_page', '8');
+	}
+}
+add_action('pre_get_posts', 'be_change_event_posts_per_page');
+
+
+
+
+
+/**
+ * Archive title.
+ */
+function monoscopic_archive_title($title)
+{
+	if (is_post_type_archive()) {
+		$title = post_type_archive_title('', false);
+	}
+	return $title;
+}
+add_filter('get_the_archive_title', 'monoscopic_archive_title');

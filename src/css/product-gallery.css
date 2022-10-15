@@ -4,7 +4,7 @@
 @media (min-width: 960px) {
   .product-gallery {
     float: left;
-    width: 65%;
+    width: 50%;
     border-right: 1px solid var(--border-default);
     position: sticky;
     top: calc(40px + 1rem + 1px);

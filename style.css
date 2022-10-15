@@ -116,13 +116,13 @@ html {
   --bg-secondary: #292929;
   --bg-dark: #e0e0e0;
   --bg-accent: aquamarine;
-  --bg-danger: #f59778;
+  --bg-danger: #00E89B;
 
   --text-default: #e0e0e0;
   --text-light: #141414;
   --text-dark: #141414;
 
-  --border-default: #3d3d3d;
+  --border-default: #292929;
   --border-light: #292929;
   --text-accent: aquamarine;
 }
@@ -289,6 +289,7 @@ a:active {
 
 /* Forms
 --------------------------------------------- */
+
 button,
 input[type='button'],
 input[type='reset'],
@@ -297,7 +298,7 @@ input[type='submit'] {
   border: 1px solid var(--border-default);
   color: var(--text-default);
   line-height: 1;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
 }
 
@@ -305,9 +306,9 @@ button:hover,
 input[type='button']:hover,
 input[type='reset']:hover,
 input[type='submit']:hover {
-  background-color: var(--bg-accent);
-  border-color: var(--bg-accent);
-  color: var(--text-light);
+  background-color: var(--bg-secondary);
+  border-color: var(--bg-secondary);
+  color: var(--text-accent);
 }
 
 input[type='text'],
@@ -348,7 +349,7 @@ input[type='datetime']:focus,
 input[type='datetime-local']:focus,
 input[type='color']:focus,
 textarea:focus {
-  color: #111;
+  color: var(--text-default);
 }
 
 select {

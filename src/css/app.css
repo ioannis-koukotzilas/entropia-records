@@ -49,12 +49,12 @@
 
 /* Site Title */
 
-.site-header .navbar .site-title {
+/* .site-header .navbar .site-title {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .site-header .navbar .site-title a::before {
   content: url(../svg/logo-entropia-black.svg);
@@ -104,8 +104,8 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-secondary);
+  /* color: var(--text-light); */
 }
 
 .site-header .panel.active {
@@ -113,7 +113,7 @@
 }
 
 .site-header .panel a {
-  color: #141414;
+  /* color: #141414; */
 }
 
 .site-header .panel > .container {
@@ -128,6 +128,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -194,10 +195,6 @@
   font-family: 'Takbolo';
   text-transform: uppercase;
 }
-
-
-
-
 
 /* Site Footer Nav
 --------------------------------------------- */
@@ -299,14 +296,10 @@
 # Products Block
 --------------------------------------------------------------*/
 
-
-  .block-header .headline {
-    font-size: var(--font-size-md);
-    margin-bottom: 1.5rem;
-  }
-
-
-
+.block-header .headline {
+  font-size: var(--font-size-md);
+  margin-bottom: 1.5rem;
+}
 
 /*--------------------------------------------------------------
 # Details / Summary
@@ -403,11 +396,8 @@ details summary::-webkit-details-marker {
 }
 
 img.perfmatters-lazy {
-  background: url(../svg/oval.svg) no-repeat 50% 50%; 
+  background: url(../svg/oval.svg) no-repeat 50% 50%;
 }
-
-
-
 
 /* Modal */
 
@@ -426,18 +416,28 @@ img.perfmatters-lazy {
   display: block;
 }
 
-.model-inner {
+.search.modal > .container {
   background-color: var(--bg-default);
-  max-width:2560px;
-  padding: 20px;
-  margin: auto;
+  max-width: 2560px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: calc(40px + 1rem);
+  display: flex;
+  align-items: center;
 }
 
-.modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px;
+.search.modal .search-form {
+  flex-grow: 1;
+  margin-right: 0.75rem;
+}
+
+.search.modal .search-form input {
+  width: 100%;
+  border: none;
+}
+
+.search.modal .search-form input:focus {
+  outline: none;
 }
 
 #modal-overlay {
@@ -448,5 +448,6 @@ img.perfmatters-lazy {
   left: 0;
   z-index: 0;
   background-color: black;
-  opacity: 0.75;  
+  opacity: 0.75;
 }
+
