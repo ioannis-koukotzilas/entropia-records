@@ -7,11 +7,11 @@
 }
 
 .site-main {
-  background-color: var(--bg-default);
+  background-color: var(--bg-base);
 }
 
 .site-main > .container {
-  max-width: var(--max-width-default);
+  max-width: var(--max-width-base);
   margin: 0 auto;
   padding: 3rem 20px;
 }
@@ -24,8 +24,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--bg-default);
-  border-bottom: 1px solid var(--border-default);
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--border-base);
 }
 
 /* Navbar
@@ -33,7 +33,7 @@
 
 .site-header .navbar .container {
   position: relative;
-  max-width: var(--max-width-xl);
+  max-width: var(--max-width-full);
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -117,7 +117,7 @@
 }
 
 .site-header .panel > .container {
-  max-width: var(--max-width-xl);
+  max-width: var(--max-width-full);
   margin: 0 auto;
   padding: 1.5rem 20px;
 }
@@ -170,13 +170,13 @@
 --------------------------------------------- */
 
 .site-footer .brand {
-  background-color: var(--bg-default);
-  border-top: 1px solid var(--border-default);
-  border-bottom: 1px solid var(--border-default);
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-base);
+  border-bottom: 1px solid var(--border-base);
 }
 
 .site-footer .brand__container {
-  max-width: var(--max-width-default);
+  max-width: var(--max-width-base);
   margin: 0 auto;
   padding: 3rem 20px;
   text-align: center;
@@ -200,11 +200,11 @@
 --------------------------------------------- */
 
 .site-footer .nav {
-  background-color: var(--bg-default);
+  background-color: var(--bg-base);
 }
 
 .site-footer .nav__container {
-  max-width: var(--max-width-xl);
+  max-width: var(--max-width-full);
   margin: 0 auto;
   padding: 1.5rem 20px;
   display: grid;
@@ -238,12 +238,12 @@
 --------------------------------------------- */
 
 .cc {
-  background-color: var(--bg-default);
+  background-color: var(--bg-base);
   font-size: 0.8rem;
 }
 
 .cc__container {
-  max-width: var(--max-width-xl);
+  max-width: var(--max-width-full);
   margin: 0 auto;
   padding: 10px 20px;
 }
@@ -272,7 +272,7 @@
     bottom: 0;
     left: calc(40px + 1rem);
     height: 100%;
-    border-right: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-base);
     z-index: 0;
   }
 
@@ -296,10 +296,7 @@
 # Products Block
 --------------------------------------------------------------*/
 
-.block-header .headline {
-  font-size: var(--font-size-md);
-  margin-bottom: 1.5rem;
-}
+
 
 /*--------------------------------------------------------------
 # Details / Summary
@@ -377,7 +374,7 @@ details summary::-webkit-details-marker {
     bottom: 0;
     left: calc(3rem + 20px);
     height: 100%;
-    border-right: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-base);
     z-index: 0;
   }
 }
@@ -417,7 +414,7 @@ img.perfmatters-lazy {
 }
 
 .search.modal > .container {
-  background-color: var(--bg-default);
+  background-color: var(--bg-base);
   max-width: 2560px;
   padding: 0 20px;
   margin: 0 auto;

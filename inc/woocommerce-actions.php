@@ -91,34 +91,62 @@ function monoscopic_product_container_open()
     }
     add_action('woocommerce_after_single_product_summary', 'monoscopic_product_container_close', 1);
 
-    // Add breadcrumb
-    add_action('woocommerce_single_product_summary', 'woocommerce_breadcrumb', 4);
-
     // Add product header wrapper.
     function monoscopic_product_header_open()
     {
         echo '<header class="product-header">';
+        echo '<div class="container">';
     }
     add_action('woocommerce_single_product_summary', 'monoscopic_product_header_open', 5);
 
+    // Add product header column one.
+    function monoscopic_product_header_col_one_open()
+    {
+        echo '<div class="col">';
+    }
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_col_one_open', 6);
+
+    function monoscopic_product_header_col_one_close()
+    {
+        echo '</div>';
+    }
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_col_one_close', 9);
+
+    // Add breadcrumb
+    add_action('woocommerce_single_product_summary', 'woocommerce_breadcrumb', 7);
+
+    // Add product header column two.
+    function monoscopic_product_header_col_two_open()
+    {
+        echo '<div class="col">';
+    }
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_col_two_open', 10);
+
+    function monoscopic_product_header_col_two_close()
+    {
+        echo '</div>';
+    }
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_col_two_close', 17);
+
     // Add artist link
-    add_action('woocommerce_single_product_summary', 'monoscopic_attribute_link_artist', 7);
+    add_action('woocommerce_single_product_summary', 'monoscopic_attribute_link_artist', 12);
 
     // Add product title.
-    add_action('woocommerce_single_product_summary', 'monoscopic_product_title', 8);
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_title', 13);
 
     // Add preorder item info.
-    add_action('woocommerce_single_product_summary', 'monoscopic_preorder_item', 9);
+    add_action('woocommerce_single_product_summary', 'monoscopic_preorder_item', 14);
 
     // Add used item info.
-    add_action('woocommerce_single_product_summary', 'monoscopic_used_item', 10);
+    add_action('woocommerce_single_product_summary', 'monoscopic_used_item', 15);
 
     // Close product header wrapper.
     function monoscopic_product_header_close()
     {
+        echo '</div>';
         echo '</header>';
     }
-    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_close', 15);
+    add_action('woocommerce_single_product_summary', 'monoscopic_product_header_close', 18);
 
     // Add product meta wrapper.
     function monoscopic_product_meta_wrapper_open()

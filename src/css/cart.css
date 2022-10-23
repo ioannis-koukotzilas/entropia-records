@@ -17,7 +17,7 @@
   .woocommerce-cart-form table tbody tr {
     display: block;
     padding: 0.5rem 0;
-    border-top: 1px solid var(--border-default);
+    border-top: 1px solid var(--border-base);
   }
 
   .woocommerce-cart-form table tbody tr td {
@@ -49,7 +49,7 @@
     vertical-align: top;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-top: 1px solid var(--border-default);
+    border-top: 1px solid var(--border-base);
   }
 
   .woocommerce-cart-form table tbody tr td:not(:last-child) {
@@ -121,7 +121,7 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25rem;
-  text-decoration-color: var(--border-default);
+  text-decoration-color: var(--border-base);
 }
 
 .cart_totals .shipping-calculator-form p {

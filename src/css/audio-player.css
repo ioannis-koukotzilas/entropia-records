@@ -4,8 +4,7 @@
 
 .audio-player {
   /* position: relative; */
-  background-color: var(--bg-default);
-  border-top: 1px solid var(--border-default);
+  border-top: 1px solid var(--border-base);
 }
 
 .audio-player > .container {
@@ -88,7 +87,6 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  color: var(--text-primary);
 }
 
 .audio-track:not(:last-child) .icon {
@@ -99,7 +97,7 @@
 .audio-track:not(:last-child) .audio-track-name {
   margin-bottom: 0.25rem;
   padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-base);
 }
 
 .audio-track:not(:last-child) .audio-track-length {
@@ -132,7 +130,7 @@
 }
 
 .audio-player-paused .audio-track.audio-track-selected {
-  color: var(--text-default);
+  color: var(--text-base);
 }
 
 .audio-player-paused .audio-track.audio-track-selected:hover {

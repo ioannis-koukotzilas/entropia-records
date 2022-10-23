@@ -100,10 +100,9 @@ if (is_product_category()) :
 ?>
   <div class="facets">
     <div class="container">
-      <?php echo do_shortcode('[facetwp facet="artist"]'); ?>
+      <?php echo do_shortcode('[facetwp facet="format"]'); ?>
       <?php echo do_shortcode('[facetwp facet="style"]'); ?>
       <?php echo do_shortcode('[facetwp facet="label"]'); ?>
-      <?php echo do_shortcode('[facetwp facet="format"]'); ?>
     </div>
     <div class="reset">
       <div class="facetwp-reset-button" onclick="FWP.reset()"><?php esc_html_e('Clear filter', 'monoscopic'); ?></div>

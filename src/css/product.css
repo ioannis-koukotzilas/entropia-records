@@ -29,7 +29,7 @@
 
 .product .summary {
   padding: 0 20px;
-  margin: 3rem 0;
+  margin: 0 0 3rem;
 }
 
 @media (min-width: 960px) {
@@ -41,8 +41,33 @@
 
 /* Product Header */
 
+
 .product-header {
-  margin: 1.5rem 0;
+  margin: 0 -20px 3rem;
+  padding: 1.5rem 20px;
+  color: var(--text-light);
+}
+
+.product_cat-jazz-blues .product-header {
+  background-color: #3399CC;
+}
+
+.product_cat-global-folk-ethnographic .product-header {
+  background-color: #FF6666;
+}
+
+
+
+
+.product-header a {
+  color: var(--text-light);
+}
+
+.product-header > .container {
+  min-height: 20vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .product-header .breadcrumb {
@@ -51,7 +76,7 @@
 
 .product-header .artist {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-md);
+  font-weight: var(--font-weight-bold);
 }
 
 .product-header .product-title {
@@ -144,15 +169,21 @@
 .single-product .related,
 .single-product .upsells {
   position: relative;
-  background-color: var(--bg-default);
-  border-top: 1px solid var(--border-default);
+  border-top: 1px solid var(--border-base);
 }
 
 .single-product .related > .container,
 .single-product .upsells > .container {
-  max-width: var(--max-width-default);
+  max-width: var(--max-width-base);
   margin: 0 auto;
-  padding: 3rem 20px;
+  padding: 4.5rem 0;
+}
+
+@media (min-width: 720px) {
+  .single-product .related > .container,
+  .single-product .upsells > .container {
+    padding: 4.5rem 20px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -164,12 +195,18 @@
     bottom: 0;
     left: calc(40px + 1rem);
     height: 100%;
-    border-right: 1px solid var(--border-default);
+    border-right: 1px solid var(--border-base);
     z-index: 0;
   }
+}
 
-  .single-product .upsells > .container,
-  .single-product .related > .container {
-    padding: 3rem 20px;
+.section-title {
+  font-size: var(--font-size-md);
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 719px) {
+  .section-title {
+    padding: 0 20px;
   }
 }

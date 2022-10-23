@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 
 if ($related_products) : ?>
 
-	<div class="related">
+	<section class="related">
 
 		<div class="container">
 
@@ -31,9 +31,9 @@ if ($related_products) : ?>
 
 			if ($heading) :
 			?>
-				<div class="block-header">
-					<h2 class="headline"><?php echo esc_html($heading); ?></h2>
-				</div>
+
+				<h2 class="section-title"><?php echo esc_html($heading); ?></h2>
+
 			<?php endif; ?>
 
 			<div class="products-slider">

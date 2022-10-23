@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 
 if ($upsells) : ?>
 
-	<div class="upsells">
+	<section class="upsells">
 
 		<div class="container">
 
@@ -31,9 +31,9 @@ if ($upsells) : ?>
 
 			if ($heading) :
 			?>
-				<div class="block-header">
-					<h2 class="headline"><?php echo esc_html($heading); ?></h2>
-				</div>
+
+				<h2 class="section-title"><?php echo esc_html($heading); ?></h2>
+
 			<?php endif; ?>
 
 			<div class="products-slider">
@@ -58,9 +58,9 @@ if ($upsells) : ?>
 
 		</div>
 
-	</div>
+		</div>
 
-<?php
+	<?php
 endif;
 
 wp_reset_postdata();
