@@ -1,9 +1,11 @@
-/**
- * Audio Playlist
- * Copyright © 2021
- * Monoscopic Studio | https://monoscopic.net
- * Version 1.0.0
- **/
+/*
+ *	ACF Audio Player
+ *
+ *	Copyright (c) Monoscopic Studio
+ *
+ *	License: CC-BY-NC-4.0
+ *	http://creativecommons.org/licenses/by-nc/4.0/
+ */
 
 class AudioTrack {
   constructor(track_element) {

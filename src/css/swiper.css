@@ -1,21 +1,11 @@
-/**
- * Swiper 8.4.2
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2022 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: September 15, 2022
- */
-
-/* Swiper Core */
+/*--------------------------------------------------------------
+# Swiper
+--------------------------------------------------------------*/
 
 .swiper {
   margin-left: auto;
   margin-right: auto;
-  /* position: relative; */
+  position: relative;
   overflow: hidden;
   list-style: none;
   padding: 0;
@@ -23,7 +13,7 @@
 }
 
 .swiper-wrapper {
-  /* position: relative; */
+  position: relative;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -53,7 +43,8 @@
   visibility: hidden;
 }
 
-/* Auto Height */
+/* Auto Height
+  --------------------------------------------- */
 
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
@@ -71,17 +62,15 @@
   backface-visibility: hidden;
 }
 
-/* Navigation */
+/* Navigation
+  --------------------------------------------- */
 
 .swiper-button-lock {
   display: none;
 }
 
-/* Pagination */
-
-.swiper-pagination-lock {
-  display: none;
-}
+/* a11y
+  --------------------------------------------- */
 
 /* a11y */
 .swiper .swiper-notification {

@@ -116,7 +116,7 @@
   }
   .products-slider .product:last-child {
     margin-right: 20px;
-   }
+  }
 }
 
 .products-slider .navigation {
@@ -134,7 +134,7 @@
 .products-slider .navigation .icon {
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-size: var(--font-size-xl);
+  font-size: var(--icon-lg);
   cursor: pointer;
   margin-top: 3rem;
 }

@@ -22,12 +22,12 @@ if (!defined('ABSPATH')) {
 
 if ($upsells) : ?>
 
-	<section class="upsells">
+	<section class="upsells products-section">
 
 		<div class="container">
 
 			<?php
-			$heading = apply_filters('woocommerce_product_upsells_products_heading', __('Recommended items', 'monoscopic'));
+			$heading = apply_filters('woocommerce_product_upsells_products_heading', __('Recommended Items', 'monoscopic'));
 
 			if ($heading) :
 			?>

@@ -1,4 +1,4 @@
-/*!
+/*
  *	dotdotdot JS
  *
  *	Copyright (c) Fred Heusschen

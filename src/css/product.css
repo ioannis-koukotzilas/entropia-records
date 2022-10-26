@@ -41,33 +41,30 @@
 
 /* Product Header */
 
-
 .product-header {
   margin: 0 -20px 3rem;
-  padding: 1.5rem 20px;
+  background-color: var(--bg-dark);
   color: var(--text-light);
 }
 
-.product_cat-jazz-blues .product-header {
-  background-color: #3399CC;
+/* .product_cat-jazz-blues .product-header {
+  background-color: #3399cc;
 }
 
 .product_cat-global-folk-ethnographic .product-header {
-  background-color: #FF6666;
-}
-
-
-
+  background-color: #ff6666;
+} */
 
 .product-header a {
   color: var(--text-light);
 }
 
 .product-header > .container {
+  padding: 1.5rem 20px;
   min-height: 20vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-header .breadcrumb {
@@ -76,7 +73,7 @@ justify-content: space-between;
 
 .product-header .artist {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
 }
 
 .product-header .product-title {
@@ -121,7 +118,7 @@ justify-content: space-between;
   display: block;
   text-align: left;
   font-weight: normal;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .variations_form td {
@@ -162,51 +159,4 @@ justify-content: space-between;
 # @ audio-player.css
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Related + Upsells
---------------------------------------------------------------*/
 
-.single-product .related,
-.single-product .upsells {
-  position: relative;
-  border-top: 1px solid var(--border-base);
-}
-
-.single-product .related > .container,
-.single-product .upsells > .container {
-  max-width: var(--max-width-base);
-  margin: 0 auto;
-  padding: 4.5rem 0;
-}
-
-@media (min-width: 720px) {
-  .single-product .related > .container,
-  .single-product .upsells > .container {
-    padding: 4.5rem 20px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .single-product .upsells::before,
-  .single-product .related::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(40px + 1rem);
-    height: 100%;
-    border-right: 1px solid var(--border-base);
-    z-index: 0;
-  }
-}
-
-.section-title {
-  font-size: var(--font-size-md);
-  margin-bottom: 3rem;
-}
-
-@media (max-width: 719px) {
-  .section-title {
-    padding: 0 20px;
-  }
-}

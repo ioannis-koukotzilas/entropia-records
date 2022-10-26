@@ -33,7 +33,7 @@
 .facetwp-type-fselect.is-loading .fs-search,
 .facetwp-type-fselect.is-loading .fs-no-results,
 .facetwp-type-fselect.is-loading .fs-options {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .facetwp-type-fselect.is-loading .fs-option {
@@ -208,11 +208,11 @@
 }
 
 .fs-option:first-child {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .fs-option:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .fs-no-results {

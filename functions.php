@@ -65,25 +65,23 @@ add_action('after_setup_theme', 'monoscopic_content_width', 0);
 function monoscopic_scripts()
 {
 	// Global Styles
-	wp_enqueue_style('normalize', get_template_directory_uri() . '/src/css/normalize.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('style', get_stylesheet_uri(), array(), _MONOSCOPIC_VERSION);
+	wp_enqueue_style('normalize', get_template_directory_uri() . '/src/css/normalize.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('app', get_template_directory_uri() . '/src/css/app.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('woocommerce', get_template_directory_uri() . '/src/css/woocommerce.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_style('products', get_template_directory_uri() . '/src/css/products.css', array(), _MONOSCOPIC_VERSION);
-
-	// Global Scripts
-	wp_enqueue_script('products', get_template_directory_uri() . '/src/js/products.js', array(), _MONOSCOPIC_VERSION, true);
 
 	// Swiper
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/src/css/swiper.css', array(), _MONOSCOPIC_VERSION);
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/src/js/swiper-bundle.js', array(), _MONOSCOPIC_VERSION, true);
 
 	wp_enqueue_script('app', get_template_directory_uri() . '/src/js/app.js', array(), _MONOSCOPIC_VERSION, true);
-	wp_enqueue_script('navigation', get_template_directory_uri() . '/src/js/navigation.js', array(), _MONOSCOPIC_VERSION, true);
+	
 
 
 	if (is_front_page()) {
-		wp_enqueue_style('home', get_template_directory_uri() . '/src/css/home.css', array(), _MONOSCOPIC_VERSION);
+		wp_enqueue_style('home', get_template_directory_uri() . '/src/css/index.css', array(), _MONOSCOPIC_VERSION);
+		wp_enqueue_script('home', get_template_directory_uri() . '/src/js/index.js', array(), _MONOSCOPIC_VERSION, true);
 	}
 
 	if (is_product()) {

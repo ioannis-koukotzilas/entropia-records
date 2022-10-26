@@ -1,8 +1,8 @@
 /*
-Swiper
-*/
+ *	Product Gallery
+ */
 
-// Product gallery
+// Init Swiper
 const swiper = new Swiper('.product-gallery .slider', {
   preloadImages: false,
   speed: 300,
@@ -26,9 +26,7 @@ const swiper = new Swiper('.product-gallery .slider', {
   },
 });
 
-/*
-Cursor Area
-*/
+// Cursor Area
 
 const cursorArea = document.querySelectorAll('.cursor-area');
 

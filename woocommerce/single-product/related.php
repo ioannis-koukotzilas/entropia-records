@@ -22,12 +22,12 @@ if (!defined('ABSPATH')) {
 
 if ($related_products) : ?>
 
-	<section class="related">
+	<section class="related products-section">
 
 		<div class="container">
 
 			<?php
-			$heading = apply_filters('woocommerce_product_related_products_heading', __('Related items', 'monoscopic'));
+			$heading = apply_filters('woocommerce_product_related_products_heading', __('Related Items', 'monoscopic'));
 
 			if ($heading) :
 			?>
@@ -58,8 +58,8 @@ if ($related_products) : ?>
 
 		</div>
 
-	</div>
-<?php
+		</div>
+	<?php
 endif;
 
 wp_reset_postdata();

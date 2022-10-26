@@ -11,7 +11,6 @@
 }
 
 .product-gallery {
-  background-color: var(--bg-secondary);
   overflow: hidden;
 }
 
@@ -34,6 +33,7 @@
   .product-gallery > .container {
     height: calc(100vh - calc(40px + 1rem));
     padding: 3.5vw;
+    border-right: 1px solid var(--border-base);
   }
   .product-gallery .swiper-slide {
     display: flex;
@@ -46,6 +46,10 @@
   }
 }
 
+.product-gallery .slider .swiper-pagination-fraction.swiper-pagination-lock {
+  display: none;
+}
+
 .product-gallery .slider .swiper-pagination-fraction {
   position: absolute;
   z-index: 1;
@@ -55,7 +59,6 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  
 }
 
 @media screen and (max-width: 959px) {
